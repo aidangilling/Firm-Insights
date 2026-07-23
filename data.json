@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-23T05:54:22.367Z",
-  "recordCount": 56,
+  "generatedAt": "2026-07-23T23:55:08.971Z",
+  "recordCount": 57,
   "firms": [
     {
       "name": "Addisons",
@@ -611,6 +611,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "Antitrust & Competition newsletter: Q2 2026",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/antitrust-and-competition-newsletter-q2-2026/",
+          "dateISO": "2026-07-23",
+          "dateText": "23 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "Antitrust & Competition newsletter: Q2 2026",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "Antitrust and Competition Compass",
