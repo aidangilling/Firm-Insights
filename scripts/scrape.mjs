@@ -1,0 +1,309 @@
+// scripts/scrape.mjs
+//
+// Shared runner. Iterates every firm adapter, applies the shared relevance +
+// jurisdiction filters, merges the manual layer, dedupes by URL, and writes
+// data.json shaped as { generatedAt, firms: [{ name, badge, records:[...] }] }.
+//
+// Robustness (see README):
+//  - A broken firm never blanks the site: if a firm errors OR returns 0 where
+//    it previously had records, we KEEP that firm's previous records.
+//  - We only write data.json when something actually changed.
+//  - Per-firm counts are logged (found / kept-AU / kept-relevant / dropped).
+//
+// Usage: node scripts/scrape.mjs
+// Exit codes: 0 = success (written or unchanged), 1 = fatal (last good kept).
+
+import { readFile, writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+import { ADAPTERS } from "./firms/index.mjs";
+import {
+  clean,
+  parseDateToISO,
+  dateFieldsFromISO,
+  assessRelevance,
+  hasAuSignal,
+  hasForeignSignal,
+} from "./lib/shared.mjs";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
+const DATA_PATH = join(ROOT, "data.json");
+const MANUAL_PATH = join(ROOT, "manual-entries.json");
+
+// Only keep scraped articles published on/after this date (ISO YYYY-MM-DD).
+// Undated scraped items can't be placed in the window, so they are dropped.
+const START_DATE = process.env.START_DATE || "2026-01-01";
+
+// ---------------------------------------------------------------------------
+// Normalisation + filtering of one adapter's raw records
+// ---------------------------------------------------------------------------
+
+function normaliseRecord(raw, adapter) {
+  const title = clean(raw.title);
+  const url = clean(raw.url);
+  if (!title || !url) return null;
+
+  const iso = raw.dateISO || parseDateToISO(raw.dateRaw || raw.date || "");
+  const df = dateFieldsFromISO(iso);
+
+  // Text we scan for relevance + jurisdiction.
+  const blob = [title, raw.teaser, raw.topicHint, (raw.tags || []).join(" ")]
+    .filter(Boolean)
+    .join(" — ");
+
+  const { relevant, topics } = assessRelevance(blob);
+
+  // Prefer explicit topic hints from the adapter, then derived topics.
+  const topicList = [...new Set([...(raw.topics || []), ...topics])];
+
+  return {
+    firm: adapter.name,
+    title,
+    permalink: url,
+    dateISO: df.dateISO,
+    dateText: df.dateText,
+    month: df.month,
+    year: df.year,
+    topic: topicList.join(", "),
+    topics: topicList,
+    teaser: clean(raw.teaser || ""),
+    summary: "", // reserved: 3–4 bullet summary can be filled in later
+    bullets: [], // reserved
+    _relevant: relevant,
+    _blob: blob,
+    _auHint: raw.auHint === true,
+    overridden: false,
+    notes: "",
+  };
+}
+
+/** Apply relevance + (for international firms) jurisdiction filters. */
+function filterRecords(records, adapter, counters) {
+  const kept = [];
+  for (const r of records) {
+    if (!r) continue;
+    counters.found++;
+
+    // Date window: keep only items on/after START_DATE. Undated → drop.
+    if (!r.dateISO || r.dateISO < START_DATE) {
+      counters.droppedDate++;
+      continue;
+    }
+
+    // Jurisdiction:
+    //  - International firms must show an Australian signal (URL/office/text).
+    //  - Domestic Australian firms pass by default, BUT are dropped when a
+    //    piece is plainly about another country with no Australian tie (these
+    //    firms also run Asia/UK/US practices).
+    let auOk;
+    if (adapter.domestic === true) {
+      // The firm's own domain is always .com.au, so ignore the URL here and
+      // judge on the TEXT: keep unless the piece is plainly foreign.
+      auOk = hasAuSignal({ text: r._blob }) || !hasForeignSignal({ text: r._blob });
+    } else {
+      // International firm: an /au/ or en-au URL path is a valid AU signal.
+      auOk = r._auHint || hasAuSignal({ text: r._blob, url: r.permalink });
+    }
+    if (!auOk) {
+      counters.droppedJurisdiction++;
+      continue;
+    }
+    counters.keptAu++;
+
+    // Relevance: competition and/or consumer law (lean to include).
+    if (!r._relevant) {
+      counters.droppedTopic++;
+      continue;
+    }
+    counters.keptRelevant++;
+    kept.push(r);
+  }
+  return kept;
+}
+
+function stripInternals(r) {
+  const { _relevant, _blob, _auHint, ...clean } = r;
+  return clean;
+}
+
+function dedupeByUrl(records) {
+  const seen = new Set();
+  const out = [];
+  for (const r of records) {
+    const key = r.permalink.replace(/[#?].*$/, "").replace(/\/$/, "").toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(r);
+  }
+  return out;
+}
+
+function sortNewestFirst(records) {
+  return records.slice().sort((a, b) => {
+    const av = a.dateISO || "";
+    const bv = b.dateISO || "";
+    if (av < bv) return 1;
+    if (av > bv) return -1;
+    return (a.title || "").localeCompare(b.title || "");
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Manual / curated layer (manual-entries.json)
+// ---------------------------------------------------------------------------
+// Shape: { "Firm Name": [ { title, url, date|dateISO, topic|topics, teaser } ], ... }
+// Entries are deep-merged in (deduped by URL, manual wins on collision) so
+// firms that can't be reliably scraped can still be hand-added.
+
+async function loadManual() {
+  try {
+    const raw = JSON.parse(await readFile(MANUAL_PATH, "utf8"));
+    const out = {};
+    for (const [firm, entries] of Object.entries(raw)) {
+      if (firm.startsWith("_")) continue;
+      if (Array.isArray(entries)) out[firm] = entries;
+    }
+    return out;
+  } catch (err) {
+    if (err.code === "ENOENT") return {};
+    console.warn(`Could not read manual-entries.json: ${err.message}`);
+    return {};
+  }
+}
+
+function manualToRecords(entries, adapter) {
+  return entries
+    .map((e) => {
+      const iso = e.dateISO || parseDateToISO(e.date || "");
+      const df = dateFieldsFromISO(iso);
+      const topics = e.topics || (e.topic ? [e.topic] : []);
+      if (!e.title || !e.url) return null;
+      return {
+        firm: adapter.name,
+        title: clean(e.title),
+        permalink: clean(e.url),
+        dateISO: df.dateISO,
+        dateText: df.dateText,
+        month: df.month,
+        year: df.year,
+        topic: topics.join(", "),
+        topics,
+        teaser: clean(e.teaser || ""),
+        summary: e.summary || "",
+        bullets: Array.isArray(e.bullets) ? e.bullets : [],
+        overridden: true,
+        notes: e.notes || "Manually added",
+      };
+    })
+    .filter(Boolean);
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+async function loadPrevious() {
+  try {
+    return JSON.parse(await readFile(DATA_PATH, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function prevFirmRecords(previous, name) {
+  if (!previous?.firms) return [];
+  const f = previous.firms.find((x) => x.name === name);
+  return f?.records || [];
+}
+
+async function main() {
+  const previous = await loadPrevious();
+  const manual = await loadManual();
+
+  const firms = [];
+  let totalRecords = 0;
+
+  for (const adapter of ADAPTERS) {
+    const counters = {
+      found: 0, keptAu: 0, keptRelevant: 0,
+      droppedDate: 0, droppedJurisdiction: 0, droppedTopic: 0,
+    };
+    let records = null;
+    let usedPrevious = false;
+
+    try {
+      const raw = await adapter.fetchRecords();
+      const normalised = (raw || []).map((r) => normaliseRecord(r, adapter));
+      records = filterRecords(normalised, adapter, counters);
+    } catch (err) {
+      console.warn(`  [${adapter.name}] ERROR: ${err.message}`);
+      records = null;
+    }
+
+    // Merge the manual layer for this firm.
+    const manualRecs = manual[adapter.name] ? manualToRecords(manual[adapter.name], adapter) : [];
+
+    // Robustness: if the scrape ERRORED (fetch threw → records === null), keep
+    // this firm's previous records rather than wiping them. A successful scrape
+    // that legitimately yields 0 in-window items is accepted as-is (0 is real,
+    // not a failure). Kept-previous records still must satisfy the date window.
+    const prev = prevFirmRecords(previous, adapter.name);
+    if (records === null) {
+      usedPrevious = true;
+      const prevScraped = prev.filter(
+        (r) => !r.overridden && r.dateISO && r.dateISO >= START_DATE
+      );
+      records = [...manualRecs, ...prevScraped];
+    } else {
+      records = [...manualRecs, ...records];
+    }
+
+    records = sortNewestFirst(dedupeByUrl(records)).map(stripInternals);
+    totalRecords += records.length;
+
+    firms.push({
+      name: adapter.name,
+      order: adapter.order,
+      badge: adapter.badge,
+      sourceUrl: adapter.sourceUrl,
+      domestic: adapter.domestic === true,
+      manualOnly: adapter.manualOnly === true,
+      records,
+    });
+
+    console.log(
+      `  [${adapter.name}] found ${counters.found}, kept-AU ${counters.keptAu}, ` +
+        `kept-relevant ${counters.keptRelevant}, dropped ` +
+        `${counters.droppedDate}(pre-${START_DATE})+${counters.droppedJurisdiction}(juris)+${counters.droppedTopic}(topic)` +
+        (manualRecs.length ? `, +${manualRecs.length} manual` : "") +
+        ` → ${records.length} shown` +
+        (usedPrevious ? "  [kept previous — scrape failed/empty]" : "")
+    );
+  }
+
+  firms.sort((a, b) => (a.order || 0) - (b.order || 0));
+
+  // Change detection: ignore generatedAt churn.
+  const signature = (fs) =>
+    JSON.stringify(fs.map((f) => ({ name: f.name, records: f.records })));
+  if (previous?.firms && signature(previous.firms) === signature(firms)) {
+    console.log(`No change vs last good data.json — nothing to write. (${totalRecords} records)`);
+    return;
+  }
+
+  const out = {
+    generatedAt: new Date().toISOString(),
+    recordCount: totalRecords,
+    firms,
+  };
+  await writeFile(DATA_PATH, JSON.stringify(out, null, 2) + "\n", "utf8");
+  console.log(`Wrote data.json — ${firms.length} firms, ${totalRecords} records.`);
+}
+
+main().catch((err) => {
+  console.error("SCRAPE FAILED:", err.message);
+  console.error("Last good data.json has been kept unchanged.");
+  process.exit(1);
+});

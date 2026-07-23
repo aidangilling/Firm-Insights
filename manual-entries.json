@@ -1,0 +1,15 @@
+{
+  "_readme": "MANUAL / CURATED LAYER. For firms whose sites can't be reliably scraped (heavy SPA, WAF/Cloudflare blocking, or a poor interface), hand-add articles here and they still appear on the site. Shape: a top-level key is the EXACT firm name (must match the adapter's name, e.g. 'Norton Rose Fulbright'); its value is an ARRAY of entries. Each entry: { title (required), url (required, the full article link), date ('10 July 2026' or any common format) OR dateISO ('2026-07-10'), topic (string) OR topics (array of strings), teaser (optional one-line blurb), notes (optional). Manual entries are deep-merged in, deduped by URL (manual wins on collision), and tagged 'manual' on the site. Keys beginning with underscore are ignored.",
+  "_example": {
+    "Norton Rose Fulbright": [
+      {
+        "title": "Example: ACCC steps up merger enforcement in 2026",
+        "url": "https://www.nortonrosefulbright.com/en-au/knowledge/publications/example-slug",
+        "date": "15 July 2026",
+        "topic": "Mergers, ACCC",
+        "teaser": "Short one-line description shown under the row.",
+        "notes": "Example only — inside _example so it is ignored. Copy this shape under a real firm-name key to activate."
+      }
+    ]
+  }
+}
