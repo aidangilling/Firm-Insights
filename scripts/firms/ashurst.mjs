@@ -23,13 +23,16 @@ const CONST = {
   v: "{06AE7648-090F-40BE-90FB-9B434EE78B77}",
   o: "ArticleDate,Descending",
 };
+// Each competition/consumer practice facet → a default Topic for its articles.
+// Every article under these facets is INCLUDED (over-include): the firm has
+// already classified it as competition/consumer/trade.
 const SERVICES = [
-  "Antitrust & Competition",
-  "Antitrust, Regulatory and Trade",
-  "Products, Liability & Consumer Protection",
+  { label: "Antitrust & Competition", topic: "Competition" },
+  { label: "Antitrust, Regulatory and Trade", topic: "Competition" },
+  { label: "Products, Liability & Consumer Protection", topic: "Consumer Law" },
 ];
 const PAGE_SIZE = 20;
-const MAX_PAGES = 6; // per service facet
+const MAX_PAGES = 8; // per service facet
 
 function parseHtmlItem(url, html) {
   const $ = load(html);
@@ -40,7 +43,8 @@ function parseHtmlItem(url, html) {
   return { title, dateRaw, teaser, tag };
 }
 
-async function fetchService(label, seen, out) {
+async function fetchService(service, seen, out) {
+  const { label, topic } = service;
   for (let page = 0; page < MAX_PAGES; page++) {
     const params = new URLSearchParams({
       ...CONST,
@@ -65,7 +69,7 @@ async function fetchService(label, seen, out) {
       if (!title) continue;
       if (tag === "event") continue; // drop pure events
       seen.add(url);
-      out.push({ title, url, dateRaw, teaser, auHint: true });
+      out.push({ title, url, dateRaw, teaser, auHint: true, preFiltered: true, defaultTopics: [topic] });
     }
 
     const total = Number(json?.Count || 0);
@@ -77,8 +81,8 @@ async function fetchService(label, seen, out) {
 async function fetchRecords() {
   const out = [];
   const seen = new Set();
-  for (const label of SERVICES) {
-    await fetchService(label, seen, out);
+  for (const service of SERVICES) {
+    await fetchService(service, seen, out);
   }
   return out;
 }

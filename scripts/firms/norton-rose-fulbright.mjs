@@ -30,9 +30,11 @@ async function fetchRecords() {
   let total = Infinity;
 
   for (let page = 0; page < MAX_PAGES; page++) {
+    // Everything the firm tags to competition / regulation practice areas
+    // (excluding pure webinars/events) → include all.
     const body = JSON.stringify({
       q: "",
-      aq: "@z95xlanguage==en-AU @templatename==Publication",
+      aq: '@z95xlanguage==en-AU @practiceareas==("Antitrust and competition","Regulation and investigations") @templatename<>("Webinar and Events")',
       numberOfResults: PAGE,
       firstResult: page * PAGE,
       searchHub: "site search",
@@ -73,6 +75,8 @@ async function fetchRecords() {
         teaser: clean(r.excerpt || ""),
         tags,
         auHint: true,
+        preFiltered: true,
+        defaultTopics: ["Competition"],
       });
     }
     if ((page + 1) * PAGE >= total) break;

@@ -59,9 +59,9 @@ async function fetchBucket(bucket, seen, out) {
         title,
         url,
         dateISO: (clean(r?.PublicationDate) || "").slice(0, 10) || null,
-        tags: [bucket.tag],
         topics: [bucket.tag === "Merger control" ? "Mergers" : bucket.tag === "Competition Law" ? "Competition" : "Consumer Law"],
         auHint: true,
+        preFiltered: true,
       });
     }
     got += results.length;

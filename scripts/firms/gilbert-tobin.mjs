@@ -12,8 +12,12 @@ import { withPage, pageFetchJson } from "../lib/browser.mjs";
 import { clean } from "../lib/shared.mjs";
 
 const ORIGIN = "https://www.gtlaw.com.au";
-const PAGE = 50;
-const MAX_START = 300; // ~6 pages of newest insights
+const PAGE = 60;
+const MAX_START = 360; // ~6 pages of newest insights
+// Articles whose own "service" metadata is competition/consumer are INCLUDED
+// outright; everything else still goes through the keyword filter (so a
+// round-up that merely mentions competition is caught too).
+const COMPETITION_SERVICE = /competition|consumer|market regulation/i;
 
 function fbUrl(start) {
   return (
@@ -54,7 +58,13 @@ async function fetchRecords() {
         seen.add(url);
         const iso = isoFromMs(r.date);
         oldestISO = iso;
-        out.push({ title, url, dateISO: iso, teaser: clean(r.summary) });
+        const service = ((r.listMetadata && r.listMetadata.service) || []).join(" ");
+        const isComp = COMPETITION_SERVICE.test(service);
+        out.push({
+          title, url, dateISO: iso, teaser: clean(r.summary),
+          preFiltered: isComp,
+          defaultTopics: isComp ? ["Competition & Consumer"] : [],
+        });
       }
       // Sorted newest-first: once a page ends before 2026 we can stop.
       if (oldestISO && oldestISO < "2026-01-01") break;

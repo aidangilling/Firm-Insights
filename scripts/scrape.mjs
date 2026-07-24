@@ -53,10 +53,22 @@ function normaliseRecord(raw, adapter) {
     .filter(Boolean)
     .join(" — ");
 
-  const { relevant, topics } = assessRelevance(blob);
+  const assessed = assessRelevance(blob);
 
-  // Prefer explicit topic hints from the adapter, then derived topics.
-  const topicList = [...new Set([...(raw.topics || []), ...topics])];
+  // OVER-INCLUDE: when a record comes from a firm's OWN competition/consumer/
+  // trade practice filter (raw.preFiltered), we trust that classification and
+  // include it regardless of our keyword engine. Jurisdiction + date window
+  // still apply. We keep any keyword-derived topics for display, and fall back
+  // to the adapter's default topic (e.g. "Competition & Consumer") if none.
+  const preFiltered = raw.preFiltered === true;
+  const relevant = preFiltered ? true : assessed.relevant;
+
+  let topicList = [...new Set([...(raw.topics || []), ...assessed.topics])];
+  if (preFiltered && topicList.length === 0) {
+    topicList = raw.defaultTopics && raw.defaultTopics.length
+      ? raw.defaultTopics
+      : ["Competition & Consumer"];
+  }
 
   return {
     firm: adapter.name,
@@ -233,8 +245,13 @@ async function main() {
     let records = null;
     let usedPrevious = false;
 
+    // Previous records for this firm, indexed by URL — passed to the adapter so
+    // it can reuse cached fields (e.g. dates that need a per-article fetch).
+    const prev = prevFirmRecords(previous, adapter.name);
+    const previousByUrl = new Map(prev.map((r) => [r.permalink, r]));
+
     try {
-      const raw = await adapter.fetchRecords();
+      const raw = await adapter.fetchRecords({ previousByUrl });
       const normalised = (raw || []).map((r) => normaliseRecord(r, adapter));
       records = filterRecords(normalised, adapter, counters);
     } catch (err) {
@@ -249,7 +266,6 @@ async function main() {
     // this firm's previous records rather than wiping them. A successful scrape
     // that legitimately yields 0 in-window items is accepted as-is (0 is real,
     // not a failure). Kept-previous records still must satisfy the date window.
-    const prev = prevFirmRecords(previous, adapter.name);
     if (records === null) {
       usedPrevious = true;
       const prevScraped = prev.filter(

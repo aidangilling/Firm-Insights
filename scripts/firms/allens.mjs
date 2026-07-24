@@ -1,44 +1,38 @@
 // scripts/firms/allens.mjs
 //
 // Allens — https://www.allens.com.au/insights-news/
-// The landing page shows only ~9 highlights, but the EPiServer/Optimizely
-// "search insights" page is fully SERVER-RENDERED and paginates cleanly:
-//   https://www.allens.com.au/search/insights/?q=<term>&page=<n>   (8 / page)
-// We run a small set of competition/consumer queries through it (leveraging
-// Allens' own search as a relevance signal), then the shared filter refines.
-// Allens is an Australian firm → domestic:true (foreign-only pieces still get
-// dropped by the runner's jurisdiction check).
+// The server-rendered insights search accepts the firm's own practice/topic
+// filter. Topic id 262 = "Competition, Consumer & Regulatory", so we list EVERY
+// insight under that practice (over-include) rather than keyword-searching:
+//   https://www.allens.com.au/search/insights/?t=262&p=<n>   (10 / page, p NOT page)
+// Cards: .block-search-result → .block-search-result__link-text (title),
+// a.block-search-result__link (href), .block-search-result__meta-date
+// ("13 Jul 2026"), .block-search-result__description (teaser).
+// Allens is Australian → domestic:true.
 
 import { load } from "cheerio";
 import { fetchText, clean, sleep, REQUEST_DELAY_MS } from "../lib/shared.mjs";
 
 const ORIGIN = "https://www.allens.com.au";
-const PAGES_PER_QUERY = 2; // 16 most-relevant results per query
-const QUERIES = [
-  "competition law",
-  "consumer law",
-  "ACCC",
-  "merger control",
-  "cartel",
-  "unfair contract terms",
-  "misleading or deceptive",
-  "greenwashing",
-];
+const TOPIC = 262; // Competition, Consumer & Regulatory
+const MAX_PAGES = 30; // 146 results ÷ 10 ≈ 15 pages; cap generously
 
 const stripTrack = (href) => (href || "").split("?")[0];
 
-async function fetchQuery(term, seen, out) {
-  for (let page = 1; page <= PAGES_PER_QUERY; page++) {
-    const url = `${ORIGIN}/search/insights/?q=${encodeURIComponent(term)}&page=${page}`;
+async function fetchRecords() {
+  const out = [];
+  const seen = new Set();
+
+  for (let p = 1; p <= MAX_PAGES; p++) {
     let html;
     try {
-      html = await fetchText(url);
+      html = await fetchText(`${ORIGIN}/search/insights/?t=${TOPIC}&p=${p}`);
     } catch {
       break;
     }
     const $ = load(html);
     const cards = $(".block-search-result");
-    if (cards.length === 0) break;
+    if (cards.length === 0) break; // past the last page
 
     cards.each((_, el) => {
       const card = $(el);
@@ -46,7 +40,7 @@ async function fetchQuery(term, seen, out) {
       const href = stripTrack(a.attr("href"));
       const title = clean(card.find(".block-search-result__link-text").first().text());
       if (!href || !title) return;
-      if (!/\/insights-news\/insights\//.test(href)) return; // insights only, not news
+      if (!/\/insights-news\//.test(href)) return;
       const permalink = href.startsWith("http") ? href : ORIGIN + href;
       if (seen.has(permalink)) return;
       seen.add(permalink);
@@ -55,17 +49,11 @@ async function fetchQuery(term, seen, out) {
         url: permalink,
         dateRaw: clean(card.find(".block-search-result__meta-date").first().text()),
         teaser: clean(card.find(".block-search-result__description").first().text()),
+        preFiltered: true,
+        defaultTopics: ["Competition & Consumer"],
       });
     });
     await sleep(REQUEST_DELAY_MS);
-  }
-}
-
-async function fetchRecords() {
-  const out = [];
-  const seen = new Set();
-  for (const term of QUERIES) {
-    await fetchQuery(term, seen, out);
   }
   return out;
 }

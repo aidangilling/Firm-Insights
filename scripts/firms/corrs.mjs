@@ -9,60 +9,107 @@
 // Relevance is decided by the shared competition/consumer filter.
 
 import { load } from "cheerio";
-import { fetchJson, fetchText, clean, sleep, REQUEST_DELAY_MS } from "../lib/shared.mjs";
+import { fetchJson, fetchText, politeFetch, clean, sleep, REQUEST_DELAY_MS } from "../lib/shared.mjs";
 
 const ORIGIN = "https://www.corrs.com.au";
 const SWIFTYPE =
   "https://host-67byae.api.swiftype.com/api/as/v1/engines/corrs-site-search-pre-prod/search";
 const SEARCH_KEY = "search-e84uht5ow3117df9upxe6pc9"; // public search-only key
-const API_PAGES = 3; // 300 most-recent insights from the index
+// The firm's own competition/consumer practice classifications — every insight
+// under these is INCLUDED (over-include).
+const COMPETITION_CAPS = ["Competition", "Competition/Antitrust Advice and Compliance"];
 
-async function fetchApi(out, seen) {
-  for (let page = 1; page <= API_PAGES; page++) {
+async function query(body) {
+  return fetchJson(SWIFTYPE, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${SEARCH_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+}
+
+function pushResult(r, out, seen, extra) {
+  const title = clean(r?.title?.raw);
+  let uri = clean(r?.uri?.raw);
+  if (!title || !uri) return;
+  const url = uri.startsWith("http") ? uri : `${ORIGIN}/${uri.replace(/^\//, "")}`;
+  if (seen.has(url)) return;
+  seen.add(url);
+  const tags = [].concat(r?.related_capabilities?.raw || []).concat(r?.tags?.raw || []);
+  out.push({
+    title,
+    url,
+    dateISO: (clean(r?.published_at?.raw) || "").slice(0, 10) || null,
+    teaser: clean(r?.summary?.raw),
+    tags: Array.isArray(tags) ? tags : [tags].filter(Boolean),
+    ...extra,
+  });
+}
+
+// 1) Everything filed under Corrs' Competition capabilities → include all.
+async function fetchByCapability(out, seen) {
+  for (let page = 1; page <= 4; page++) {
     let json;
     try {
-      json = await fetchJson(SWIFTYPE, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${SEARCH_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query: "",
-          page: { size: 100, current: page },
-          filters: { type: "insight" },
-          sort: [{ published_at_unix: "desc" }],
-        }),
+      json = await query({
+        query: "",
+        page: { size: 100, current: page },
+        filters: { all: [{ type: "insight" }, { related_capabilities: COMPETITION_CAPS }] },
+        sort: [{ published_at_unix: "desc" }],
       });
-    } catch {
-      break;
-    }
-    const results = Array.isArray(json?.results) ? json.results : [];
-    if (results.length === 0) break;
-    for (const r of results) {
-      const title = clean(r?.title?.raw);
-      let uri = clean(r?.uri?.raw);
-      if (!title || !uri) continue;
-      const url = uri.startsWith("http") ? uri : `${ORIGIN}/${uri.replace(/^\//, "")}`;
-      if (seen.has(url)) continue;
-      seen.add(url);
-      const tags = [].concat(r?.related_capabilities?.raw || []).concat(r?.tags?.raw || []);
-      out.push({
-        title,
-        url,
-        dateISO: (clean(r?.published_at?.raw) || "").slice(0, 10) || null,
-        teaser: clean(r?.summary?.raw),
-        tags: Array.isArray(tags) ? tags : [tags].filter(Boolean),
-      });
-    }
-    const totalPages = Number(json?.meta?.page?.total_pages || 0);
-    if (page >= totalPages) break;
+    } catch { break; }
+    const results = json?.results || [];
+    if (!results.length) break;
+    for (const r of results) pushResult(r, out, seen, { preFiltered: true, defaultTopics: ["Competition"] });
+    if (page >= Number(json?.meta?.page?.total_pages || 0)) break;
     await sleep(REQUEST_DELAY_MS);
   }
 }
 
+// 2) Recent insights across all capabilities → keyword filter catches consumer
+//    / ACL items that aren't tagged to the Competition capability.
+async function fetchRecent(out, seen) {
+  for (let page = 1; page <= 3; page++) {
+    let json;
+    try {
+      json = await query({
+        query: "",
+        page: { size: 100, current: page },
+        filters: { type: "insight" },
+        sort: [{ published_at_unix: "desc" }],
+      });
+    } catch { break; }
+    const results = json?.results || [];
+    if (!results.length) break;
+    for (const r of results) pushResult(r, out, seen, {});
+    if (page >= Number(json?.meta?.page?.total_pages || 0)) break;
+    await sleep(REQUEST_DELAY_MS);
+  }
+}
+
+/** Read a Corrs article's publication date (ISO) from its JSON-LD. */
+async function fetchDateISO(url) {
+  try {
+    const res = await politeFetch(url);
+    const html = await res.text();
+    const m = /"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})/.exec(html);
+    return m ? m[1] : null;
+  } catch {
+    return null;
+  }
+}
+
+async function mapPool(items, limit, fn) {
+  let i = 0;
+  async function worker() {
+    while (i < items.length) { const idx = i++; await fn(items[idx]); }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+}
+
 // Freshest items straight off the SSR listing (covers the index's ~4-month lag).
-async function fetchHomepage(out, seen) {
+// The listing has no dates, so we read each new article's JSON-LD date (cached
+// across runs via previousByUrl). These go through the shared keyword filter.
+async function fetchHomepage(out, seen, previousByUrl) {
   let html;
   try {
     html = await fetchText(`${ORIGIN}/insights`);
@@ -70,6 +117,7 @@ async function fetchHomepage(out, seen) {
     return;
   }
   const $ = load(html);
+  const fresh = [];
   $("a[href*='/insights/']").each((_, el) => {
     const a = $(el);
     const href = a.attr("href") || "";
@@ -81,15 +129,22 @@ async function fetchHomepage(out, seen) {
     seen.add(url);
     const card = a.closest(".uk-card, li, article, div");
     const teaser = clean(card.find("p").not(".uk-text-uppercase").first().text());
-    out.push({ title, url, teaser });
+    fresh.push({ title, url, teaser });
   });
+
+  await mapPool(fresh, 6, async (it) => {
+    const prev = previousByUrl && previousByUrl.get(it.url);
+    it.dateISO = prev && prev.dateISO ? prev.dateISO : await fetchDateISO(it.url);
+  });
+  for (const it of fresh) out.push(it);
 }
 
-async function fetchRecords() {
+async function fetchRecords({ previousByUrl } = {}) {
   const out = [];
   const seen = new Set();
-  await fetchApi(out, seen);
-  await fetchHomepage(out, seen);
+  await fetchByCapability(out, seen);
+  await fetchRecent(out, seen);
+  await fetchHomepage(out, seen, previousByUrl);
   return out;
 }
 

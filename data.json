@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-23T05:54:22.367Z",
-  "recordCount": 56,
+  "generatedAt": "2026-07-24T00:25:33.353Z",
+  "recordCount": 90,
   "firms": [
     {
       "name": "Addisons",
@@ -71,6 +71,42 @@
         },
         {
           "firm": "Addisons",
+          "title": "SMS Sender IDs to Be Labelled “Unverified” Unless Registered from 1 July 2026",
+          "permalink": "https://addisons.com/article/sms-sender-ids-to-be-labelled-unverified-unless-registered-from-1-july-2026/",
+          "dateISO": "2026-06-10",
+          "dateText": "10 June 2026",
+          "month": "June 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "From 1 July 2026, SMS messages sent using an unregistered branded sender ID will no longer display the relevant brand name. Instead, they will be labelled “Unverified” and grouped with other unregistered messages, including those that may be associated with scam activity.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Addisons",
+          "title": "Unregistered branded SMS to be labelled “unverified” from 1 July 2026",
+          "permalink": "https://addisons.com/article/unregistered-branded-sms-to-be-labelled-unverified-from-1-july-2026/",
+          "dateISO": "2026-05-11",
+          "dateText": "11 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "From 1 July 2026, SMS messages sent using an unregistered branded sender ID will no longer display the relevant brand name. Instead, these messages will be labelled “Unverified” and grouped with other unregistered SMS messages, including potential scam messages.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Addisons",
           "title": "Australia’s merger regime: early trends are increasing execution risk for deals",
           "permalink": "https://addisons.com/article/australias-merger-regime-early-trends-are-increasing-execution-risk-for-deals/",
           "dateISO": "2026-04-01",
@@ -121,7 +157,7 @@
           "topics": [
             "Mergers"
           ],
-          "teaser": "From 1 January 2026, Australia’s new merger clearance regime goes live and it’s a game changer for M&#038;A in Australia.",
+          "teaser": "From 1 January 2026, Australia’s new merger clearance regime goes live and it’s a game changer for M&A in Australia.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -140,6 +176,24 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Allens",
+          "title": "2026 mid-year interim class action report",
+          "permalink": "https://www.allens.com.au/insights-news/insights/2026/07/2026-mid-year-interim-class-action-report/",
+          "dateISO": "2026-07-23",
+          "dateText": "23 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Across the first half of 2026 class action, filing rates largely mirrored what we observed in 2025, with a broad base of claims filed across a wide range of sectors. However, following a number of key ... Automotive Class Actions Competition, Consumer & Regulatory Employment, Industrial Relations & Safety General Counsel",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Allens",
           "title": "Australia's new unfair trading practices regime: what businesses need to know",
@@ -181,17 +235,53 @@
         },
         {
           "firm": "Allens",
-          "title": "ASIC v HCF Life: further guidance on unfair contract terms laws",
-          "permalink": "https://www.allens.com.au/insights-news/insights/2026/06/asic-v-hcf-life-further-guidance-on-unfair-contract-terms-laws/",
-          "dateISO": "2026-06-25",
-          "dateText": "25 June 2026",
-          "month": "June 2026",
+          "title": "Feta, Ouzo, Glera: key changes under the Australia–EU trade agreements",
+          "permalink": "https://www.allens.com.au/insights-news/insights/2026/04/feta-ouzo-glera-key-changes-under-the-australia-eu-trade-agreements/",
+          "dateISO": "2026-04-02",
+          "dateText": "2 April 2026",
+          "month": "April 2026",
           "year": 2026,
-          "topic": "Unfair Contract Terms",
+          "topic": "Competition & Consumer",
           "topics": [
-            "Unfair Contract Terms"
+            "Competition & Consumer"
           ],
-          "teaser": "The Full Federal Court has provided further guidance on unfair contract terms laws, including in relation to the assessment of whether a term creates a significant balance and whether the term is reas ... ASIC Disputes & Investigations Insurance",
+          "teaser": "Under the draft Australia-European Union Free Trade Agreement, Australia has agreed to protect hundreds of terms relating to food, beverage and agricultural products of European origin. As a result, t ... Competition, Consumer & Regulatory Intellectual Property Patents & Trade Marks",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Allens",
+          "title": "Recent trends in food, beverage and agribusiness M&A, and what's ahead for 2026",
+          "permalink": "https://www.allens.com.au/insights-news/insights/2026/03/recent-trends-in-food-beverage-and-agribusiness-ma-and-whats-ahead-for-2026/",
+          "dateISO": "2026-03-30",
+          "dateText": "30 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "The food, beverage and agribusiness sector has demonstrated remarkable resilience in the face of shifting market conditions and uncertain global headwinds, with disclosed deal values more than doublin ... Agribusiness Competition, Consumer & Regulatory Corporate Governance Mergers & Acquisitions Private Capital",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Allens",
+          "title": "Class action risk 2026",
+          "permalink": "https://www.allens.com.au/insights-news/explore/2026/class-action-risk-2026/",
+          "dateISO": "2026-03-26",
+          "dateText": "26 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "In this year's edition of Class Action Risk, we give an update on the current indicators and drivers of class action risk, with a particular focus on how that risk was spread across a wide range of sectors in 2025, and what areas of emerging risk to watch throughout 2026. ... Automotive Class Actions Competition, Consumer & Regulatory Employment, Industrial Relations & Safety",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -411,6 +501,24 @@
         },
         {
           "firm": "Gilbert + Tobin",
+          "title": "‘Click Here’: Australia’s Scam Prevention Framework takes shape",
+          "permalink": "https://www.gtlaw.com.au/insights/click-here-australias-scam-prevention-framework-takes-shape",
+          "dateISO": "2026-06-03",
+          "dateText": "3 June 2026",
+          "month": "June 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Treasury has now revealed how the Scams Prevention Framework will work in practice and proposed a new feature, a reimbursement scheme with a $3,000 threshold and equal liability model which will fundamentally change the commercial risk landscape.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
           "title": "New merger regime: first-quarter insights",
           "permalink": "https://www.gtlaw.com.au/insights/new-merger-regime-first-quarter-insights",
           "dateISO": "2026-05-14",
@@ -613,6 +721,24 @@
       "records": [
         {
           "firm": "Ashurst",
+          "title": "Antitrust & Competition newsletter: Q2 2026",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/antitrust-and-competition-newsletter-q2-2026/",
+          "dateISO": "2026-07-23",
+          "dateText": "23 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "Antitrust & Competition newsletter: Q2 2026",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
           "title": "Antitrust and Competition Compass",
           "permalink": "https://www.ashurstperkinscoie.com/en/insights/competition-compass---antitrust-law-on-merger-issues-for-international/",
           "dateISO": "2026-07-20",
@@ -624,6 +750,60 @@
             "Competition"
           ],
           "teaser": "Welcome to the inaugural edition of Ashurst Perkins Coie's \"Competition Compass\".",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Australia Quickguides",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/quickguides/australia-quickguides/",
+          "dateISO": "2026-07-17",
+          "dateText": "17 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Ashurst's Quickguides: our library of legal summaries on a range of key issues relevant to our clients",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Class Actions Quickguides",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/quickguides/class-actions-quickguides/",
+          "dateISO": "2026-07-17",
+          "dateText": "17 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Ashurst's Quickguides: our library of legal summaries on a range of key issues relevant to our clients",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "When 'Made by Humans' Becomes a Selling Point: Branding in an AI age",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/when-made-by-humans-becomes-a-selling-point-branding-in-an-ai-age/",
+          "dateISO": "2026-07-08",
+          "dateText": "8 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "Businesses are developing labels, stamps, and certification frameworks to differentiate human-made products and content from AI-generated ones.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -668,6 +848,24 @@
         },
         {
           "firm": "Ashurst",
+          "title": "Significant amendments to Victoria’s Security of Payment Act are now in effect",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/significant-amendments-to-victorias-security-of-payment-act-are-now-in-effect/",
+          "dateISO": "2026-04-23",
+          "dateText": "23 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Key changes to Victoria's security of payment regime. Learn how the new amendments affect your construction contracts and what steps to take",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
           "title": "Competition Law Quarterly Asia Pacific",
           "permalink": "https://www.ashurstperkinscoie.com/en/insights/apac-competition-law-quarterly/",
           "dateISO": "2026-04-20",
@@ -679,6 +877,42 @@
             "Competition"
           ],
           "teaser": "APAC Competition Law Quarterly focuses on key developments and enforcement cases across the Asia Pacific (APAC) region.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Introduction to International Arbitration",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/quickguide-introduction-to-international-arbitration/",
+          "dateISO": "2026-04-20",
+          "dateText": "20 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "This Quickguide provides an introduction to international arbitration, its key characteristics and how arbitration works in practice.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "And then one did: The first Australian securities class action to succeed",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/and-then-one-did-the-first-australian-securities-class-action-to-succeed/",
+          "dateISO": "2026-04-14",
+          "dateText": "14 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "The Court found both liability and loss in a securities class action for the first time in Southernwood v Brambles Limited (No 3) [2026] FCA 418",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -717,6 +951,114 @@
             "Enforcement & Penalties"
           ],
           "teaser": "The Australian Government has doubled the maximum penalties for serious competition and consumer law breaches.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "How Australia's ASIC v FIIG decision supports your cyber investment business case",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/how-australias-asic-v-fiig-decision-supports-your-cyber-investment-business-case/",
+          "dateISO": "2026-03-25",
+          "dateText": "25 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "ASIC's $2.5m FIIG Securities penalty: Australia's first AFSL cyber security fine. What it means for cyber resilience and compliance.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Complaints under the spotlight: ASIC’s public IDR reporting heightens accountability for financial firms",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/complaints-under-the-spotlight/",
+          "dateISO": "2026-03-24",
+          "dateText": "24 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Complaints under the spotlight: ASIC’s public IDR reporting heightens accountability for financial firms",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Australian High Court confirms the test for apprehended bias in \"split\" civil penalty hearings",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/australian-high-court-confirms-the-test-for-apprehended-bias-in-split-civil-penalty-hearings/",
+          "dateISO": "2026-03-19",
+          "dateText": "19 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "High Court rules adverse credit findings in civil penalty contravention hearings don't disqualify judges from presiding at penalty stage.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Caught in the Crosswinds: Navigating the Surge in Wind Energy Disputes – Part III: Turbine Supply, Operation and Maintenance Disputes",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/caught-in-the-crosswinds-navigating-the-surge-in-wind-energy-disputes-part-iii/",
+          "dateISO": "2026-03-19",
+          "dateText": "19 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "The wind power industry has a key role to play in the future of energy. But it has experienced well-documented growing pains over the past few years.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Tax Controversy and Tax Dispute Resolution",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/tax-controversy-and-tax-dispute-resolution/",
+          "dateISO": "2026-03-18",
+          "dateText": "18 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Ashurst's Tax Controversy team helps corporations resolve global tax disputes through evidence-led analysis from audits to litigation.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "When Management Fails the Board: Lessons from ASIC v Bekier",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/when-management-fails-the-board-lessons-from-asic-v-bekier/",
+          "dateISO": "2026-03-17",
+          "dateText": "17 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Ashurst unpacks ASIC v Bekier, exploring directors' duties, board reliance on management, in-house counsel obligations and AI use in governance.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -774,6 +1116,78 @@
             "ACCC"
           ],
           "teaser": "The ACCC has announced its compliance and enforcement priorities for 2026 to 2027.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Australia's first specific safety laws aimed at regulating the use of digital work systems",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/australias-first-specific-safety-laws-aimed-at-regulating-the-use-of-digital-work-systems/",
+          "dateISO": "2026-02-19",
+          "dateText": "19 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "New legislation has passed NSW Parliament to regulate safety risks arising from use of digital work systems",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Climate litigation in Australia: Key developments in 2025 and what's ahead for 2026",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/climate-litigation-in-australia-key-developments-in-2025-and-whats-ahead-for-2026/",
+          "dateISO": "2026-02-19",
+          "dateText": "19 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "We summarise the key developments in climate litigation Australia in 2025 and what is ahead for 2026.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Key Australian contract law lessons from recent cases",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/key-australian-contract-law-lessons-from-recent-cases/",
+          "dateISO": "2026-02-17",
+          "dateText": "17 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Lessons from recent Australian contract law cases",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Current trends in Australian disputes 2025-26",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/current-trends-in-australian-disputes-2025-26/",
+          "dateISO": "2026-02-03",
+          "dateText": "3 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Our Australian Dispute Resolution team reviews key 2025 dispute developments and shares predictions for areas to watch in 2026.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -1031,6 +1445,24 @@
       "records": [
         {
           "firm": "Gadens",
+          "title": "OAIC sweep highlights ad-tech privacy risks: Determinations against Medmate and Monash IVF’s use of tracking pixels",
+          "permalink": "https://www.gadens.com/legal-insights/oaic-sweep-highlights-ad-tech-privacy-risks-determinations-against-medmate-and-monash-ivfs-use-of-tracking-pixels/",
+          "dateISO": "2026-07-07",
+          "dateText": "7 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "OAIC sweep highlights ad-tech privacy risks: determinations against Medmate and Monash IVF’s use of tracking",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
           "title": "ACCC blocks Coles’ proposed Kalgoorlie supermarket: Implications for shopping centre developers, owners and managers",
           "permalink": "https://www.gadens.com/legal-insights/accc-blocks-coles-proposed-kalgoorlie-supermarket-implications-for-shopping-centre-developers-owners-and-managers/",
           "dateISO": "2026-07-06",
@@ -1041,7 +1473,25 @@
           "topics": [
             "ACCC"
           ],
-          "teaser": "The ACCC has determined that Coles must not put into effect its proposed acquisition of a leasehold interest for a...",
+          "teaser": "The ACCC has determined that Coles must not put into effect its proposed acquisition of",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Game of chance: July 2026 permit fee changes",
+          "permalink": "https://www.gadens.com/legal-insights/game-of-chance-july-2026-permit-fee-changes/",
+          "dateISO": "2026-07-06",
+          "dateText": "6 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Australian trade promotion regulators have increased permit application fees, effective 1 July 2026. Here is",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -1059,7 +1509,172 @@
           "topics": [
             "Unfair Trading"
           ],
-          "teaser": "The Federal Government has released a consultation paper examining whether the forthcoming unfair trading practices prohibition should be extended to...",
+          "teaser": "The Federal Government has released a consultation paper examining whether the forthcoming unfair trading practices",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Coordination in a crisis: ACCC receives extended authorisation powers",
+          "permalink": "https://www.gadens.com/legal-insights/coordination-in-a-crisis-accc-receives-extended-authorisation-powers/",
+          "dateISO": "2026-05-29",
+          "dateText": "29 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "ACCC",
+          "topics": [
+            "ACCC"
+          ],
+          "teaser": "On 13 May 2026, and with limited prior notice, the Federal Government introduced into the",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Consumer Express | May 2026 Edition",
+          "permalink": "https://www.gadens.com/legal-insights/consumer-express-may-2026-edition/",
+          "dateISO": "2026-05-27",
+          "dateText": "27 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "In the May 2026 edition of Consumer Express, we unpack the legal developments most relevant",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "ACCC v Coles: When ‘Was/Now’ pricing crosses the line",
+          "permalink": "https://www.gadens.com/legal-insights/accc-v-coles-when-was-now-pricing-crosses-the-line/",
+          "dateISO": "2026-05-25",
+          "dateText": "25 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition, ACCC",
+          "topics": [
+            "Competition",
+            "ACCC"
+          ],
+          "teaser": "The Federal Court’s recent judgment in Australian Competition and Consumer Commission v Coles Supermarkets Australia",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Doubled maximum penalties for competition and consumer law breaches raise compliance stakes",
+          "permalink": "https://www.gadens.com/legal-insights/doubled-maximum-penalties-for-competition-and-consumer-law-breaches-raise-compliance-stakes/",
+          "dateISO": "2026-05-21",
+          "dateText": "21 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition, Consumer Law, Enforcement & Penalties",
+          "topics": [
+            "Competition",
+            "Consumer Law",
+            "Enforcement & Penalties"
+          ],
+          "teaser": "In response to rising fuel prices, the Federal Government has significantly increased the financial consequences",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Tripping the wire: New voting power triggers in Australia’s merger control regime",
+          "permalink": "https://www.gadens.com/legal-insights/tripping-the-wire-new-voting-power-triggers-in-australias-merger-control-regime/",
+          "dateISO": "2026-03-25",
+          "dateText": "25 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "The number of transactions caught by Australia’s new merger control regime is set to expand",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Australian mandatory merger control: Key implications",
+          "permalink": "https://www.gadens.com/legal-insights/australian-mandatory-merger-control-key-implications/",
+          "dateISO": "2026-03-11",
+          "dateText": "11 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "The introduction of mandatory merger control in Australia introduces the biggest change in Australian deal",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Australian M&A: A review of 2025 and outlook for 2026",
+          "permalink": "https://www.gadens.com/legal-insights/australian-ma-a-review-of-2025-and-outlook-for-2026/",
+          "dateISO": "2026-02-26",
+          "dateText": "26 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "In 2025, Gadens’ Corporate team advised on over 50 M&A transactions totalling more than AUD3.8",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "New prohibitions on unfair trading practices on the horizon",
+          "permalink": "https://www.gadens.com/legal-insights/new-prohibitions-on-unfair-trading-practices-on-the-horizon/",
+          "dateISO": "2026-02-10",
+          "dateText": "10 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Unfair Trading",
+          "topics": [
+            "Unfair Trading"
+          ],
+          "teaser": "Following the release of two Decision Regulation Impact Statements (DRISs) in December that proposed significant",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gadens",
+          "title": "Battle of the Brands: Bed Bath ‘N’ Table Triumphs in Landmark High Court Decision",
+          "permalink": "https://www.gadens.com/legal-insights/battle-of-the-brands-bed-bath-n-table-triumphs-in-landmark-high-court-decision/",
+          "dateISO": "2026-01-13",
+          "dateText": "13 January 2026",
+          "month": "January 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "In Bed Bath ‘N’ Table v Global Retail Brands Australia Pty Ltd HCA 50, the",
           "summary": "",
           "bullets": [],
           "overridden": false,

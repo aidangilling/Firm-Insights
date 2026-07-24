@@ -32,12 +32,19 @@ export async function withPage(origin, fn, { waitMs = 4000 } = {}) {
       viewport: { width: 1280, height: 900 },
     });
     const page = await ctx.newPage();
-    await page.goto(origin, { waitUntil: "domcontentloaded", timeout: 45000 });
-    await page.waitForTimeout(waitMs); // let the CF challenge resolve
-    const title = await page.title();
-    if (/just a moment|attention required/i.test(title)) {
-      throw new Error("Cloudflare challenge not passed");
+    // Cloudflare's managed challenge sometimes needs a couple of tries.
+    let passed = false;
+    for (let attempt = 1; attempt <= 3 && !passed; attempt++) {
+      await page.goto(origin, { waitUntil: "domcontentloaded", timeout: 45000 });
+      await page.waitForTimeout(waitMs);
+      const title = await page.title();
+      if (!/just a moment|attention required|checking your browser/i.test(title)) {
+        passed = true;
+      } else {
+        await page.waitForTimeout(4000); // give the challenge more time, then retry
+      }
     }
+    if (!passed) throw new Error("Cloudflare challenge not passed");
     return await fn(page);
   } finally {
     await browser.close();
