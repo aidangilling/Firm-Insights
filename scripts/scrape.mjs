@@ -69,6 +69,12 @@ function normaliseRecord(raw, adapter) {
       ? raw.defaultTopics
       : ["Competition & Consumer"];
   }
+  // Split any comma-joined label so the article is tagged under EACH topic.
+  topicList = [
+    ...new Set(
+      topicList.flatMap((t) => String(t).split(",").map((s) => s.trim())).filter(Boolean)
+    ),
+  ];
 
   return {
     firm: adapter.name,
@@ -190,7 +196,13 @@ function manualToRecords(entries, adapter) {
     .map((e) => {
       const iso = e.dateISO || parseDateToISO(e.date || "");
       const df = dateFieldsFromISO(iso);
-      const topics = e.topics || (e.topic ? [e.topic] : []);
+      const topics = [
+        ...new Set(
+          (e.topics || (e.topic ? [e.topic] : []))
+            .flatMap((t) => String(t).split(",").map((s) => s.trim()))
+            .filter(Boolean)
+        ),
+      ];
       if (!e.title || !e.url) return null;
       return {
         firm: adapter.name,

@@ -48,11 +48,21 @@
     });
   }
 
+  // An article's individual topics. Any comma-joined label (e.g. "Mergers, ACCC"
+  // or "Consumer Law, Class Actions") is split so the article appears under EACH
+  // heading, not as one combined topic.
   function recTopics(r) {
-    if (Array.isArray(r.topics) && r.topics.length) return r.topics;
-    if (r.topic && r.topic.trim())
-      return r.topic.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
-    return [];
+    var raw = Array.isArray(r.topics) && r.topics.length
+      ? r.topics
+      : (r.topic ? [r.topic] : []);
+    var out = [], seen = {};
+    raw.forEach(function (t) {
+      String(t).split(",").forEach(function (s) {
+        s = s.trim();
+        if (s && !seen[s]) { seen[s] = 1; out.push(s); }
+      });
+    });
+    return out;
   }
 
   // ---- global filter state ----------------------------------------------
@@ -151,11 +161,10 @@
         "</div>" +
         '<div class="statgroup statgroup--topic"><h3>By Topic</h3>' +
           '<div class="statgroup__scrollbody">' + topicRows + "</div></div>" +
-        '<div class="stats-right">' +
-          '<div class="statgroup statgroup--date"><h3>By Date</h3>' + dateRows + "</div>" +
-          '<div class="statgroup statgroup--firm"><h3>By Firm</h3>' +
-            '<div class="statgroup__scrollbody">' + firmRows + "</div></div>" +
-        "</div>" +
+        '<div class="statgroup statgroup--date"><h3>By Date</h3>' +
+          '<div class="statgroup__scrollbody">' + dateRows + "</div></div>" +
+        '<div class="statgroup statgroup--firm"><h3>By Firm</h3>' +
+          '<div class="statgroup__scrollbody">' + firmRows + "</div></div>" +
       "</div>" +
       '<div class="global-bar">' +
         '<button type="button" class="clear-filters" id="clear-all" hidden>Clear all filters ✕</button>' +
@@ -200,19 +209,6 @@
       firmControllers.forEach(function (c) { c.clearSearch(); });
       updateAll();
     });
-
-    // Size the stats row to the By Topic content so its card fills to the
-    // bottom (no trailing white space); By Firm then scrolls in the right column.
-    function fitStatsHeight() {
-      var statsEl = overviewEl.querySelector(".stats");
-      var tBody = overviewEl.querySelector(".statgroup--topic .statgroup__scrollbody");
-      if (!statsEl || !tBody) return;
-      if (window.innerWidth <= 860) { statsEl.style.gridTemplateRows = ""; return; }
-      var h = Math.max(320, Math.min(470, tBody.scrollHeight + 50));
-      statsEl.style.gridTemplateRows = h + "px";
-    }
-    fitStatsHeight();
-    window.addEventListener("resize", fitStatsHeight);
   }
 
   // ---- one firm section --------------------------------------------------

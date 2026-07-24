@@ -114,31 +114,22 @@ a:hover {
 }
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1.85fr 1.35fr;
+  grid-template-columns: repeat(4, 1fr); /* four equal boxes side by side */
+  grid-auto-rows: 340px; /* fixed row height so long lists scroll and every box
+                            fills to the same bottom edge (no trailing gap) */
   gap: 12px;
   margin-bottom: 6px;
-  align-items: stretch;
-  /* grid-template-rows is set by JS (fitStatsHeight) to the By Topic content
-     height so every card fills to the same bottom edge — no trailing gap. */
 }
-/* Right column: By Date (top) + By Firm (fills the rest, ~bottom half). */
-.stats-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-height: 0;
-}
+/* Each box is a flex column so its scroll body fills the fixed-height card. */
+.statgroup--topic,
+.statgroup--firm,
 .statgroup--date {
-  flex: 0 0 auto;
-}
-.statgroup--firm {
-  flex: 1 1 auto;
-  min-height: 0;
   display: flex;
   flex-direction: column;
 }
+.statgroup--topic .statgroup__scrollbody,
 .statgroup--firm .statgroup__scrollbody,
-.statgroup--topic .statgroup__scrollbody {
+.statgroup--date .statgroup__scrollbody {
   flex: 1 1 auto;
   min-height: 0;
   max-height: none;
@@ -146,9 +137,17 @@ a:hover {
   margin: 0 -6px;
   padding: 0 6px;
 }
+.statgroup--topic .statgroup__scrollbody .statrow,
 .statgroup--firm .statgroup__scrollbody .statrow,
-.statgroup--topic .statgroup__scrollbody .statrow {
+.statgroup--date .statgroup__scrollbody .statrow {
   margin: 0;
+}
+/* By Date has only four rows — let them grow to fill the box evenly. */
+.statgroup--date .statgroup__scrollbody {
+  overflow-y: visible;
+}
+.statgroup--date .statgroup__scrollbody .statrow {
+  flex: 1 1 auto;
 }
 .statgroup--firm .statrow .k {
   font-size: 12.5px;
@@ -164,32 +163,17 @@ a:hover {
   object-fit: contain;
   vertical-align: middle;
 }
-/* By Topic fills its full card height (no trailing white space). */
-.statgroup--topic {
-  display: flex;
-  flex-direction: column;
-}
-.statgroup--topic .statgroup__scrollbody {
-  flex: 1 1 auto;
-  min-height: 0;
-  max-height: none;
-  overflow-y: auto;
-}
-@media (max-width: 860px) {
-  .statgroup--topic .statgroup__scrollbody {
-    max-height: 232px;
-  }
-}
 @media (max-width: 860px) {
   .stats {
     grid-template-columns: 1fr;
-    height: auto;
+    grid-auto-rows: auto;
   }
-  .stats-right {
-    display: contents;
-  }
+  .statgroup--topic .statgroup__scrollbody,
   .statgroup--firm .statgroup__scrollbody {
     max-height: 232px;
+  }
+  .statgroup--date .statgroup__scrollbody .statrow {
+    flex: 0 0 auto;
   }
 }
 .statgroup {
