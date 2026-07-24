@@ -118,8 +118,8 @@ a:hover {
   gap: 12px;
   margin-bottom: 6px;
   align-items: stretch;
-  height: 360px; /* fixed so By Topic fills its card (scrolls) rather than
-                    stretching tall with empty space below the rows */
+  /* grid-template-rows is set by JS (fitStatsHeight) to the By Topic content
+     height so every card fills to the same bottom edge — no trailing gap. */
 }
 /* Right column: By Date (top) + By Firm (fills the rest, ~bottom half). */
 .stats-right {
@@ -137,11 +137,18 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-.statgroup--firm .statgroup__scrollbody {
+.statgroup--firm .statgroup__scrollbody,
+.statgroup--topic .statgroup__scrollbody {
   flex: 1 1 auto;
   min-height: 0;
   max-height: none;
   overflow-y: auto;
+  margin: 0 -6px;
+  padding: 0 6px;
+}
+.statgroup--firm .statgroup__scrollbody .statrow,
+.statgroup--topic .statgroup__scrollbody .statrow {
+  margin: 0;
 }
 .statgroup--firm .statrow .k {
   font-size: 12.5px;
