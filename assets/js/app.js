@@ -56,12 +56,12 @@
   }
 
   // ---- global filter state ----------------------------------------------
-  var G = { topic: new Set(), date: new Set() };
+  var G = { firm: new Set(), topic: new Set(), date: new Set() };
   var firmControllers = []; // one per firm section, each with a redraw()
   var REF_ISO = null; // reference "today" for date ranges (from generatedAt)
 
   function anyGlobalActive() {
-    return G.topic.size || G.date.size;
+    return G.firm.size || G.topic.size || G.date.size;
   }
 
   // Date-range values → the earliest ISO date they include (relative to REF_ISO).
@@ -86,6 +86,7 @@
   ];
 
   function matchesGlobal(r) {
+    if (G.firm.size && !G.firm.has(r.firm)) return false;
     if (G.topic.size && !recTopics(r).some(function (t) { return G.topic.has(t); }))
       return false;
     if (G.date.size) {
@@ -129,6 +130,11 @@
       return facetRow("date", d.value, d.label, n);
     }).join("");
 
+    // By Firm — in the firms' given order, with each firm's article count.
+    var firmRows = firms.map(function (f) {
+      return facetRow("firm", f.name, f.name, (f.records || []).length);
+    }).join("");
+
     overviewEl.innerHTML =
       '<div class="stats">' +
         '<div class="statgroup statgroup--headline">' +
@@ -137,9 +143,13 @@
           '<div class="sub" id="headline-sub">across ' + firms.length +
           " firms · as at " + esc(stamp) + "</div>" +
         "</div>" +
-        '<div class="statgroup statgroup--scroll statgroup--wide"><h3>By Topic</h3>' +
+        '<div class="statgroup statgroup--scroll statgroup--topic"><h3>By Topic</h3>' +
           '<div class="statgroup__scrollbody">' + topicRows + "</div></div>" +
-        '<div class="statgroup"><h3>By Date</h3>' + dateRows + "</div>" +
+        '<div class="stats-right">' +
+          '<div class="statgroup statgroup--date"><h3>By Date</h3>' + dateRows + "</div>" +
+          '<div class="statgroup statgroup--scroll statgroup--firm"><h3>By Firm</h3>' +
+            '<div class="statgroup__scrollbody">' + firmRows + "</div></div>" +
+        "</div>" +
       "</div>" +
       '<div class="global-bar">' +
         '<button type="button" class="clear-filters" id="clear-all" hidden>Clear all filters ✕</button>' +
@@ -176,7 +186,7 @@
     });
 
     document.getElementById("clear-all").addEventListener("click", function () {
-      G.topic.clear(); G.date.clear();
+      G.firm.clear(); G.topic.clear(); G.date.clear();
       overviewEl.querySelectorAll(".statrow.selectable.active").forEach(function (el) {
         el.classList.remove("active");
         el.setAttribute("aria-pressed", "false");
@@ -190,8 +200,9 @@
   function badgeHtml(badge, name) {
     if (badge && badge.logo) {
       var tileBg = badge.tile ? ' style="background:' + esc(badge.tile) + '"' : "";
+      var ih = badge.imgH ? ' style="height:' + Number(badge.imgH) + 'px"' : "";
       return '<span class="firm-badge"' + tileBg + '><img src="' + esc(badge.logo) +
-        '" alt="' + esc(name) + ' logo" /></span>';
+        '" alt="' + esc(name) + ' logo"' + ih + " /></span>";
     }
     var color = (badge && badge.color) || "#333333";
     var initial = (badge && badge.initial) || (name || "?").charAt(0);
@@ -264,9 +275,11 @@
     section.innerHTML =
       '<div class="firm-head">' +
         badgeHtml(firm.badge, firm.name) +
-        "<h2>" + esc(firm.name) + "</h2>" +
+        '<span class="firm-name-a11y">' + esc(firm.name) + "</span>" +
         '<a class="firm-source-link" href="' + esc(firm.sourceUrl) +
-          '" rel="noopener" target="_blank">Visit insights ↗</a>' +
+          '" rel="noopener" target="_blank" style="background:' +
+          esc((firm.badge && firm.badge.color) || "#ef8645") +
+          '">Visit insights ↗</a>' +
       "</div>" +
       '<div class="toolbar">' +
         '<div class="search"><input type="search" placeholder="Search ' +
@@ -437,7 +450,8 @@
         // Footer timestamp line.
         var fa = document.getElementById("footer-asat");
         if (fa) {
-          fa.innerHTML = "This website covers all competition and consumer law articles published as at <strong>" +
+          fa.innerHTML = "This website covers all competition and consumer law articles published from " +
+            "<strong>1 January 2026</strong> onwards, as at <strong>" +
             esc(stamp) + "</strong> (Australia/Sydney).";
         }
 

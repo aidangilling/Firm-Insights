@@ -114,19 +114,45 @@ a:hover {
 }
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1.85fr 1.35fr;
   gap: 12px;
   margin-bottom: 6px;
+  align-items: stretch;
 }
-.statgroup--wide {
-  grid-column: span 2;
+/* Right column: By Date (top) + By Firm (fills the rest, ~bottom half). */
+.stats-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+.statgroup--date {
+  flex: 0 0 auto;
+}
+.statgroup--firm {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.statgroup--firm .statgroup__scrollbody {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  overflow-y: auto;
+}
+.statgroup--firm .statrow .k {
+  font-size: 12.5px;
 }
 @media (max-width: 860px) {
   .stats {
     grid-template-columns: 1fr;
   }
-  .statgroup--wide {
-    grid-column: auto;
+  .stats-right {
+    display: contents;
+  }
+  .statgroup--firm .statgroup__scrollbody {
+    max-height: 232px;
   }
 }
 .statgroup {
@@ -260,11 +286,24 @@ a:hover {
 .firm-head {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 14px;
   border-bottom: 3px solid var(--orange);
   padding-bottom: 10px;
+}
+/* Firm name kept for screen readers / search, hidden visually (badge suffices). */
+.firm-name-a11y {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 /* Logo badge — a white tile sized so the logo reads clearly. The logo is drawn
    at a fixed height (square logos fill it; wide wordmarks are width-capped and
@@ -320,7 +359,7 @@ a:hover {
   box-shadow: var(--shadow);
 }
 .firm-head .firm-source-link:hover {
-  background: var(--orange-deep);
+  filter: brightness(0.9);
   text-decoration: none;
 }
 

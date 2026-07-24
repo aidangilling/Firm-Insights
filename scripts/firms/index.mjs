@@ -19,7 +19,6 @@ import gadens from "./gadens.mjs";
 import corrs from "./corrs.mjs";
 import dentons from "./dentons.mjs";
 import maddocks from "./maddocks.mjs";
-import dlaPiper from "./dla-piper.mjs";
 import hallWilcox from "./hall-wilcox.mjs";
 import macphersonKelley from "./macpherson-kelley.mjs";
 import millsOakley from "./mills-oakley.mjs";
@@ -28,24 +27,27 @@ import millsOakley from "./mills-oakley.mjs";
 // when a logo needs contrast (default tile is white). Firms omitted here use a
 // monogram. HSF Kramer stays manual (hard Cloudflare); everything else is
 // automated.
+// logo: the badge image. color: the firm's brand accent (used for its "Visit
+// insights" button — deliberately NOT all orange). imgH: optional badge image
+// height override (px) for logos that read too large at the default 48.
 const BADGES = {
-  "Addisons": { logo: "assets/logos/addisons.svg" },
-  "Allens": { logo: "assets/logos/allens.webp" },
-  "Mallesons": { logo: "assets/logos/mallesons.png" },
-  "Gilbert + Tobin": { logo: "assets/logos/gilbert-tobin.png" },
-  "MinterEllison": { logo: "assets/logos/minter-ellison.png" },
-  "Clayton Utz": { logo: "assets/logos/clayton-utz.jpg" },
-  "Ashurst": { logo: "assets/logos/ashurst.webp" },
-  "Baker McKenzie": { logo: "assets/logos/baker-mckenzie.png" },
-  "Bird & Bird": { logo: "assets/logos/bird-and-bird.png" },
-  "Herbert Smith Freehills Kramer": { logo: "assets/logos/hsf-kramer.png" },
-  "Gadens": { logo: "assets/logos/gadens.png" },
-  "Corrs Chambers Westgarth": { logo: "assets/logos/corrs.jpg" },
-  "Dentons": { logo: "assets/logos/dentons.png" },
-  "Maddocks": { logo: "assets/logos/maddocks.png" },
-  "DLA Piper": { logo: "assets/logos/dla-piper.webp" },
-  "Macpherson Kelley": { logo: "assets/logos/macpherson-kelley.jpg" },
-  "Mills Oakley": { logo: "assets/logos/mills-oakley.webp" },
+  "Addisons": { logo: "assets/logos/addisons.svg", color: "#ef8645" },
+  "Allens": { logo: "assets/logos/allens.webp", color: "#1a1a1a" },
+  "Mallesons": { logo: "assets/logos/mallesons.png", color: "#2a2a2a" },
+  "Gilbert + Tobin": { logo: "assets/logos/gilbert-tobin.png", color: "#e4002b" },
+  "MinterEllison": { logo: "assets/logos/minter-ellison.png", color: "#e00034" },
+  "Clayton Utz": { logo: "assets/logos/clayton-utz.jpg", color: "#16463d" },
+  "Ashurst": { logo: "assets/logos/ashurst.webp", color: "#e8503a" },
+  "Baker McKenzie": { logo: "assets/logos/baker-mckenzie.png", color: "#b4131f" },
+  "Bird & Bird": { logo: "assets/logos/bird-and-bird.png", color: "#cf2030", imgH: 38 },
+  "Herbert Smith Freehills Kramer": { logo: "assets/logos/hsf-kramer.png", color: "#00524c" },
+  "Gadens": { logo: "assets/logos/gadens.png", color: "#43b02a" },
+  "Corrs Chambers Westgarth": { logo: "assets/logos/corrs.jpg", color: "#c8102e" },
+  "Dentons": { logo: "assets/logos/dentons.png", color: "#6a1a9a" },
+  "Maddocks": { logo: "assets/logos/maddocks.png", color: "#009a44" },
+  "Hall & Wilcox": { logo: "assets/logos/hall-wilcox.png", color: "#582c83" },
+  "Macpherson Kelley": { logo: "assets/logos/macpherson-kelley.jpg", color: "#0057b8" },
+  "Mills Oakley": { logo: "assets/logos/mills-oakley.webp", color: "#e35205" },
 };
 
 export const ADAPTERS = [
@@ -63,10 +65,9 @@ export const ADAPTERS = [
   corrs,             // 12
   dentons,           // 13 (Sydney only)
   maddocks,          // 14
-  dlaPiper,          // 15 (headless — Vercel challenge)
-  hallWilcox,        // 16
-  macphersonKelley,  // 17
-  millsOakley,       // 18
+  hallWilcox,        // 15
+  macphersonKelley,  // 16
+  millsOakley,       // 17
 ];
 
 // Reassign display order from position, and attach real logos where supplied.

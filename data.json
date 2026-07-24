@@ -7,7 +7,7 @@
       "order": 1,
       "badge": {
         "initial": "A",
-        "color": "#0a3a4a",
+        "color": "#ef8645",
         "logo": "assets/logos/addisons.svg"
       },
       "sourceUrl": "https://addisons.com/insights/",
@@ -171,7 +171,7 @@
       "order": 2,
       "badge": {
         "initial": "A",
-        "color": "#000000",
+        "color": "#1a1a1a",
         "logo": "assets/logos/allens.webp"
       },
       "sourceUrl": "https://www.allens.com.au/insights-news/",
@@ -354,7 +354,7 @@
       "order": 3,
       "badge": {
         "initial": "M",
-        "color": "#3b2a6b",
+        "color": "#2a2a2a",
         "logo": "assets/logos/mallesons.png"
       },
       "sourceUrl": "https://www.mallesons.com/au/en/insights/latest-thinking.html?page=1",
@@ -895,7 +895,7 @@
       "order": 6,
       "badge": {
         "initial": "C",
-        "color": "#e5231b",
+        "color": "#16463d",
         "logo": "assets/logos/clayton-utz.jpg"
       },
       "sourceUrl": "https://www.claytonutz.com/insights",
@@ -1169,7 +1169,7 @@
       "order": 7,
       "badge": {
         "initial": "A",
-        "color": "#6b2c91",
+        "color": "#e8503a",
         "logo": "assets/logos/ashurst.webp"
       },
       "sourceUrl": "https://www.ashurstperkinscoie.com/en/insights/all-insights/",
@@ -1675,7 +1675,7 @@
       "order": 8,
       "badge": {
         "initial": "B",
-        "color": "#b31e30",
+        "color": "#b4131f",
         "logo": "assets/logos/baker-mckenzie.png"
       },
       "sourceUrl": "https://www.bakermckenzie.com/en/insight",
@@ -1819,8 +1819,9 @@
       "order": 9,
       "badge": {
         "initial": "B",
-        "color": "#d81f2a",
-        "logo": "assets/logos/bird-and-bird.png"
+        "color": "#cf2030",
+        "logo": "assets/logos/bird-and-bird.png",
+        "imgH": 38
       },
       "sourceUrl": "https://www.twobirds.com/en/insights",
       "domestic": false,
@@ -2107,7 +2108,7 @@
       "order": 11,
       "badge": {
         "initial": "G",
-        "color": "#3f9c35",
+        "color": "#43b02a",
         "logo": "assets/logos/gadens.png"
       },
       "sourceUrl": "https://www.gadens.com/latest-insights/",
@@ -2533,7 +2534,7 @@
       "order": 14,
       "badge": {
         "initial": "M",
-        "color": "#00843d",
+        "color": "#009a44",
         "logo": "assets/logos/maddocks.png"
       },
       "sourceUrl": "https://www.maddocks.com.au/insights",
@@ -2984,24 +2985,12 @@
       ]
     },
     {
-      "name": "DLA Piper",
+      "name": "Hall & Wilcox",
       "order": 15,
       "badge": {
-        "initial": "D",
-        "color": "#003a70",
-        "logo": "assets/logos/dla-piper.webp"
-      },
-      "sourceUrl": "https://www.dlapiper.com/en-au/insights?f:CountriesID=[Australia]",
-      "domestic": false,
-      "manualOnly": false,
-      "records": []
-    },
-    {
-      "name": "Hall & Wilcox",
-      "order": 16,
-      "badge": {
         "initial": "H",
-        "color": "#5c2d91"
+        "color": "#582c83",
+        "logo": "assets/logos/hall-wilcox.png"
       },
       "sourceUrl": "https://hallandwilcox.com.au/news/?service=15647",
       "domestic": true,
@@ -3029,7 +3018,7 @@
     },
     {
       "name": "Macpherson Kelley",
-      "order": 17,
+      "order": 16,
       "badge": {
         "initial": "MK",
         "color": "#0057b8",
@@ -3140,7 +3129,7 @@
     },
     {
       "name": "Mills Oakley",
-      "order": 18,
+      "order": 17,
       "badge": {
         "initial": "M",
         "color": "#e35205",

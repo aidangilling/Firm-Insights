@@ -1,7 +1,7 @@
 # Australian Firm Insights — competition & consumer law digest
 
 A self-updating static website that aggregates the **insights / media releases of
-11 law firms**, filtered to **Australian / NSW-Sydney content that touches
+17 Australian law firms**, filtered to **Australian / NSW-Sydney content that touches
 competition and/or consumer law**. One sortable, searchable table per firm, with
 a code-generated monogram badge next to each heading. It refreshes automatically
 **twice daily** via a GitHub Action and deploys on **GitHub Pages** — no server,
@@ -14,7 +14,7 @@ Live site: <https://aidangilling.github.io/firm-insights/>
 
 ---
 
-## The 18 firms
+## The 17 firms
 
 Shown in this order (Addisons first). "Method" is how each firm's competition /
 consumer list is fetched — wherever possible, from the firm's **own** practice /
@@ -37,17 +37,16 @@ is included (not just keyword matches).
 | 12 | Corrs Chambers Westgarth | Elastic App Search — Competition capabilities + recent insights + SSR homepage |
 | 13 | Dentons | ASMX (base64+gzip) — **Sydney** × Competition practice + Sydney keyword pass |
 | 14 | Maddocks | Headless Chromium (passes Cloudflare) → Craft listing partial for its Competition/Antitrust capability |
-| 15 | DLA Piper | Headless Chromium (passes Vercel challenge) → en-au (Australia) insights, competition-filtered (best-effort) |
-| 16 | Hall & Wilcox | Craft GraphQL — its "Competition and Consumer Law" service |
-| 17 | Macpherson Kelley | WordPress REST — its "competition and consumer" expertise taxonomy |
-| 18 | Mills Oakley | WordPress REST — its "Competition, Regulatory and Risk" practice + keyword pass |
+| 15 | Hall & Wilcox | Craft GraphQL — its "Competition and Consumer Law" service |
+| 16 | Macpherson Kelley | WordPress REST — its "competition and consumer" expertise taxonomy |
+| 17 | Mills Oakley | WordPress REST — its "Competition, Regulatory and Risk" practice + keyword pass |
 
 Every firm except **HSF Kramer** updates itself twice daily. HSF Kramer sits
 behind a Cloudflare challenge headless browsers can't pass, so its table is
 filled from `manual-entries.json` — see *Adding entries by hand* below. Firms
 marked "Headless Chromium" need the Playwright browser (installed in CI).
-(Norton Rose Fulbright was dropped — no findable Australian competition/consumer
-content in its feed.)
+(Norton Rose Fulbright and DLA Piper were dropped — neither has findable
+Australian competition/consumer content dated in the current window.)
 
 ## How the selection works
 
@@ -102,7 +101,7 @@ the exact firm name:
 
 ```json
 {
-  "King & Wood Mallesons": [
+  "Mallesons": [
     {
       "title": "ACCC's new merger regime: what dealmakers need to know",
       "url": "https://www.mallesons.com/au/en/insights/latest-thinking/....html",
