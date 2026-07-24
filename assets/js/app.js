@@ -130,9 +130,15 @@
       return facetRow("date", d.value, d.label, n);
     }).join("");
 
-    // By Firm — in the firms' given order, with each firm's article count.
+    // By Firm — in the firms' given order, each with a mini logo + article count.
     var firmRows = firms.map(function (f) {
-      return facetRow("firm", f.name, f.name, (f.records || []).length);
+      var mini = f.badge && f.badge.logo
+        ? ' <img class="firm-mini" src="' + esc(f.badge.logo) + '" alt="" />'
+        : "";
+      return '<div class="statrow selectable" role="button" tabindex="0" aria-pressed="false"' +
+        ' data-facet="firm" data-value="' + esc(f.name) + '"><span class="k">' +
+        esc(f.name) + mini + '</span><span class="v">' + esc((f.records || []).length) +
+        "</span></div>";
     }).join("");
 
     overviewEl.innerHTML =

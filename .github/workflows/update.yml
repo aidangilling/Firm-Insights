@@ -8,8 +8,10 @@ on:
   schedule:
     # GitHub cron is UTC and cannot express a timezone. Sydney is UTC+10 (AEST)
     # / UTC+11 (AEDT), so these shift by an hour across daylight saving.
+    # Three times a day (~every 8h).
     - cron: "0 21 * * *" # ~07:00 Sydney morning (08:00 during AEDT)
-    - cron: "0 9 * * *" #  ~19:00 Sydney evening (20:00 during AEDT)
+    - cron: "0 5 * * *" #  ~15:00 Sydney afternoon (16:00 during AEDT)
+    - cron: "0 13 * * *" # ~23:00 Sydney night (00:00 during AEDT)
 
 # Allow the workflow to commit the refreshed data.json back to the repo.
 permissions:

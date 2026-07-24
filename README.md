@@ -4,7 +4,7 @@ A self-updating static website that aggregates the **insights / media releases o
 17 Australian law firms**, filtered to **Australian / NSW-Sydney content that touches
 competition and/or consumer law**. One sortable, searchable table per firm, with
 a code-generated monogram badge next to each heading. It refreshes automatically
-**twice daily** via a GitHub Action and deploys on **GitHub Pages** — no server,
+**three times a day** via a GitHub Action and deploys on **GitHub Pages** — no server,
 no build step, the front end just reads a committed `data.json`.
 
 Scope: only articles dated **1 January 2026 onwards** are shown (configurable via
@@ -41,7 +41,7 @@ is included (not just keyword matches).
 | 16 | Macpherson Kelley | WordPress REST — its "competition and consumer" expertise taxonomy |
 | 17 | Mills Oakley | WordPress REST — its "Competition, Regulatory and Risk" practice + keyword pass |
 
-Every firm except **HSF Kramer** updates itself twice daily. HSF Kramer sits
+Every firm except **HSF Kramer** updates itself three times a day. HSF Kramer sits
 behind a Cloudflare challenge headless browsers can't pass, so its table is
 filled from `manual-entries.json` — see *Adding entries by hand* below. Firms
 marked "Headless Chromium" need the Playwright browser (installed in CI).
@@ -137,5 +137,5 @@ Change the date window: `START_DATE=2025-01-01 npm run scrape`.
 ## Deployment
 
 GitHub Pages from `main` / root. The Action (`.github/workflows/update.yml`) runs
-at ~07:00 and ~19:00 Sydney (and on demand), rebuilds `data.json`, and commits it
+at ~07:00, ~15:00 and ~23:00 Sydney (and on demand), rebuilds `data.json`, and commits it
 only when it changed.
