@@ -140,15 +140,22 @@
       return facetRow("date", d.value, d.label, n);
     }).join("");
 
+    // Shorter display names for the compact By Firm list (filter value stays
+    // the full name).
+    var SHORT_FIRM = {
+      "Herbert Smith Freehills Kramer": "HSFK",
+      "Corrs Chambers Westgarth": "Corrs",
+    };
     // By Firm — in the firms' given order, each with a mini logo + article count.
     var firmRows = firms.map(function (f) {
+      var display = SHORT_FIRM[f.name] || f.name;
       var mini = f.badge && f.badge.logo
-        ? ' <img class="firm-mini" src="' + esc(f.badge.logo) + '" alt="" />'
+        ? '<img class="firm-mini" src="' + esc(f.badge.logo) + '" alt="" />'
         : "";
       return '<div class="statrow selectable" role="button" tabindex="0" aria-pressed="false"' +
         ' data-facet="firm" data-value="' + esc(f.name) + '"><span class="k">' +
-        esc(f.name) + mini + '</span><span class="v">' + esc((f.records || []).length) +
-        "</span></div>";
+        '<span class="firm-name">' + esc(display) + "</span>" + mini +
+        '</span><span class="v">' + esc((f.records || []).length) + "</span></div>";
     }).join("");
 
     overviewEl.innerHTML =
