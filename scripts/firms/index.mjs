@@ -33,7 +33,8 @@ const BADGES = {
   "Allens": { logo: "assets/logos/allens.webp" },
   "Mallesons": { logo: "assets/logos/mallesons.png" },
   "Gilbert + Tobin": { logo: "assets/logos/gilbert-tobin.png" },
-  "Clayton Utz": { logo: "assets/logos/clayton-utz.png" },
+  "MinterEllison": { logo: "assets/logos/minter-ellison.png" },
+  "Clayton Utz": { logo: "assets/logos/clayton-utz.jpg" },
   "Ashurst": { logo: "assets/logos/ashurst.webp" },
   "Baker McKenzie": { logo: "assets/logos/baker-mckenzie.png" },
   "Bird & Bird": { logo: "assets/logos/bird-and-bird.png" },
@@ -43,7 +44,8 @@ const BADGES = {
   "Dentons": { logo: "assets/logos/dentons.png" },
   "Maddocks": { logo: "assets/logos/maddocks.png" },
   "DLA Piper": { logo: "assets/logos/dla-piper.webp" },
-  "Mills Oakley": { logo: "assets/logos/mills-oakley.png" },
+  "Macpherson Kelley": { logo: "assets/logos/macpherson-kelley.jpg" },
+  "Mills Oakley": { logo: "assets/logos/mills-oakley.webp" },
 };
 
 export const ADAPTERS = [

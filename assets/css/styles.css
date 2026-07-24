@@ -266,38 +266,37 @@ a:hover {
   border-bottom: 3px solid var(--orange);
   padding-bottom: 10px;
 }
-/* Logo badge — a white tile of consistent HEIGHT so wordmark logos read well. */
+/* Logo badge — a white tile sized so the logo reads clearly. The logo is drawn
+   at a fixed height (square logos fill it; wide wordmarks are width-capped and
+   letterboxed via object-fit so they never distort). */
 .firm-badge {
   flex: 0 0 auto;
-  height: 46px;
-  min-width: 46px;
-  max-width: 190px;
-  padding: 6px 12px;
-  border-radius: 10px;
-  background: #fff;
-  border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 .firm-badge img {
-  height: 100%;
+  height: 48px;
   width: auto;
-  max-width: 100%;
+  max-width: 210px;
   object-fit: contain;
   display: block;
 }
 /* Monogram fallback (firms with no supplied logo). */
 .firm-badge--mono {
-  width: 46px;
-  min-width: 46px;
+  width: 56px;
+  height: 56px;
   padding: 0;
   color: #fff;
   font-family: var(--serif);
   font-weight: 700;
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1;
   border: none;
 }

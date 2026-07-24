@@ -845,7 +845,8 @@
       "order": 5,
       "badge": {
         "initial": "M",
-        "color": "#e00034"
+        "color": "#e00034",
+        "logo": "assets/logos/minter-ellison.png"
       },
       "sourceUrl": "https://www.minterellison.com/competition-consumer-and-regulation",
       "domestic": true,
@@ -895,7 +896,7 @@
       "badge": {
         "initial": "C",
         "color": "#e5231b",
-        "logo": "assets/logos/clayton-utz.png"
+        "logo": "assets/logos/clayton-utz.jpg"
       },
       "sourceUrl": "https://www.claytonutz.com/insights",
       "domestic": true,
@@ -3031,7 +3032,8 @@
       "order": 17,
       "badge": {
         "initial": "MK",
-        "color": "#0057b8"
+        "color": "#0057b8",
+        "logo": "assets/logos/macpherson-kelley.jpg"
       },
       "sourceUrl": "https://mk.com.au/news-insights/?expertise=competition-and-consumer",
       "domestic": true,
@@ -3142,7 +3144,7 @@
       "badge": {
         "initial": "M",
         "color": "#e35205",
-        "logo": "assets/logos/mills-oakley.png"
+        "logo": "assets/logos/mills-oakley.webp"
       },
       "sourceUrl": "https://www.millsoakley.com.au/recent-insights/",
       "domestic": true,
