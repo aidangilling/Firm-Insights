@@ -14,42 +14,49 @@ Live site: <https://aidangilling.github.io/firm-insights/>
 
 ---
 
-## The 11 firms
+## The 10 firms
 
-Shown in this order (Addisons first). "Method" is how each firm's list is fetched.
+Shown in this order (Addisons first). "Method" is how each firm's competition /
+consumer list is fetched — wherever possible, from the firm's **own** practice /
+topic classification so EVERY article the firm files under competition/consumer
+is included (not just keyword matches).
 
-| # | Firm | Method | Source |
-|---|------|--------|--------|
-| 1 | Addisons | WordPress REST API (`td_insights`) | insights |
-| 2 | Allens | EPiServer server-rendered search (per-topic queries) | insights-news |
-| 3 | King & Wood Mallesons | **Manual** (hard Cloudflare block, no dates on listing) | Latest Thinking |
-| 4 | Gilbert + Tobin | Headless Chromium → Funnelback JSON (passes Cloudflare) | insights |
-| 5 | Ashurst | Sitecore SXA search JSON (`CountriesComputed=Australia` + competition/consumer practices) | all-insights |
-| 6 | Baker McKenzie | **Manual** (Sitecore search needs internal filter GUIDs) | insight |
-| 7 | Bird & Bird | Solr JSON (`Countries=Australia` + competition/consumer practices) | insights |
-| 8 | Norton Rose Fulbright | Coveo proxy JSON (`en-AU` publications) | knowledge/publications |
-| 9 | Herbert Smith Freehills Kramer | **Manual** (hard Cloudflare block, even headless) | insights-listing |
-| 10 | Gadens | WordPress listing (cheerio) | latest-insights |
-| 11 | Corrs Chambers Westgarth | Elastic App Search JSON + SSR homepage for freshness | insights |
+| # | Firm | Method |
+|---|------|--------|
+| 1 | Addisons | WordPress REST (`td_insights`) ∪ its "Competition, Consumer & Antitrust" capability tag |
+| 2 | Allens | Server-rendered search filtered to its "Competition, Consumer & Regulatory" practice (`t=262`) |
+| 3 | King & Wood Mallesons | Headless Chromium (passes Cloudflare) → its "Competition & Antitrust" practice page + per-article JSON-LD dates |
+| 4 | Gilbert + Tobin | Headless Chromium → Funnelback JSON; per-article "service" tag = competition ∪ keywords |
+| 5 | Ashurst | Sitecore SXA JSON — Australia × Antitrust/Competition + Products/Consumer practices |
+| 6 | Baker McKenzie | Sitecore insights API — Australia × Antitrust & Consumer practices + AU keyword queries |
+| 7 | Bird & Bird | Solr JSON — Australia × competition/consumer/merger practice facets |
+| 8 | Herbert Smith Freehills Kramer | **Manual** (hard Cloudflare block that headless can't pass) |
+| 9 | Gadens | Theme AJAX → its "Competition, Consumer and Trade Law" practice (all 145) + per-article JSON-LD dates |
+| 10 | Corrs Chambers Westgarth | Elastic App Search — Competition capabilities + recent insights + SSR homepage (per-article dates) |
 
-**Automated firms** update themselves twice daily. **Manual firms** (KWM, Baker
-McKenzie, HSF Kramer) sit behind protections that block automation, so their
-tables are filled from `manual-entries.json` — see *Adding entries by hand* below.
+Every firm except **HSF Kramer** updates itself twice daily. HSF Kramer sits
+behind a Cloudflare challenge headless browsers can't pass, so its table is
+filled from `manual-entries.json` — see *Adding entries by hand* below.
+(Norton Rose Fulbright was dropped — it publishes no findable Australian
+competition/consumer content in its feed.)
 
 ## How the selection works
 
-Every article passes two filters (in `scripts/lib/shared.mjs`):
-
-- **Jurisdiction** — international firms (Ashurst, Baker, Bird & Bird, NRF, HSF)
-  must show an Australian signal; the queries above already restrict them to
-  Australia. Domestic firms are kept unless a piece is *plainly* about another
-  country with no Australian tie (they run Asia/UK/US practices too).
-- **Relevance** — a competition/consumer-law keyword engine. Unambiguous signals
-  (ACCC, cartel, merger control, Australian Consumer Law, misleading conduct,
-  unfair contract terms, greenwashing, product safety, …) qualify an article and
-  set its Topic. Generic words ("penalties", "enforcement", "pricing") only add a
-  label to an already-relevant article — they never qualify one alone, which
-  keeps out employment/privacy/ASIC noise. The bias is **lean-to-include**.
+- **Over-include by the firm's own classification.** When a firm's site files an
+  article under a "Competition / Consumer / Trade" practice, topic or capability,
+  EVERY such article is included (`preFiltered`) — even if its text never trips
+  our keywords. This is the authoritative signal.
+- **Keyword engine (the safety net).** Anything not practice-tagged still passes
+  through a competition/consumer keyword engine (`scripts/lib/shared.mjs`):
+  unambiguous signals (ACCC, cartel, merger control, Australian Consumer Law,
+  misleading conduct, unfair contract terms, greenwashing, product safety, …)
+  qualify an article and set its Topic; generic words ("penalties",
+  "enforcement", "pricing") only add a label to an already-relevant article. The
+  bias is **lean-to-include**.
+- **Jurisdiction.** International firms (Ashurst, Baker, Bird & Bird, HSF) are
+  queried Australia-only; domestic firms are kept unless a piece is plainly about
+  another country with no Australian tie (they run Asia/UK/US practices too).
+- **Date window.** Only articles dated **1 January 2026 onward** are shown.
 
 ## Architecture
 

@@ -12,14 +12,14 @@ import gilbertTobin from "./gilbert-tobin.mjs";
 import ashurst from "./ashurst.mjs";
 import bakerMckenzie from "./baker-mckenzie.mjs";
 import birdAndBird from "./bird-and-bird.mjs";
-import nortonRoseFulbright from "./norton-rose-fulbright.mjs";
 import hsfKramer from "./hsf-kramer.mjs";
 import gadens from "./gadens.mjs";
 import corrs from "./corrs.mjs";
 
-// Order matches the brief. Manual-only firms (no reliable automated feed):
-// King & Wood Mallesons (3), Baker McKenzie (6) and Herbert Smith Freehills
-// Kramer (9) — their tables are filled from manual-entries.json.
+// Norton Rose Fulbright was dropped: it publishes no findable Australian
+// competition/consumer content in its feed. Herbert Smith Freehills Kramer (9)
+// is hard-Cloudflare-blocked (headless can't pass) so it is filled from the
+// manual layer (manual-entries.json). Every other firm is fully automated.
 export const ADAPTERS = [
   addisons,
   allens,
@@ -28,7 +28,6 @@ export const ADAPTERS = [
   ashurst,
   bakerMckenzie,
   birdAndBird,
-  nortonRoseFulbright,
   hsfKramer,
   gadens,
   corrs,

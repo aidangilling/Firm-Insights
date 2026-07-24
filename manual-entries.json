@@ -1,15 +1,47 @@
 {
-  "_readme": "MANUAL / CURATED LAYER. For firms whose sites can't be reliably scraped (heavy SPA, WAF/Cloudflare blocking, or a poor interface), hand-add articles here and they still appear on the site. Shape: a top-level key is the EXACT firm name (must match the adapter's name, e.g. 'Norton Rose Fulbright'); its value is an ARRAY of entries. Each entry: { title (required), url (required, the full article link), date ('10 July 2026' or any common format) OR dateISO ('2026-07-10'), topic (string) OR topics (array of strings), teaser (optional one-line blurb), notes (optional). Manual entries are deep-merged in, deduped by URL (manual wins on collision), and tagged 'manual' on the site. Keys beginning with underscore are ignored.",
+  "_readme": "MANUAL / CURATED LAYER. For firms whose sites can't be reliably scraped from CI (heavy SPA, or hard Cloudflare/WAF blocking), hand-add articles here and they still appear on the site. Shape: a top-level key is the EXACT firm name (must match the adapter's name, e.g. 'Herbert Smith Freehills Kramer'); its value is an ARRAY of entries. Each entry: { title (required), url (required, the full article link), date ('10 July 2026' or any common format) OR dateISO ('2026-07-10'), topic (string) OR topics (array of strings), teaser (optional), notes (optional). Manual entries are deduped by URL (manual wins on collision), tagged 'manual' on the site, and are NOT date-filtered. Keys beginning with underscore are ignored.",
   "_example": {
-    "Norton Rose Fulbright": [
+    "Some Firm": [
       {
         "title": "Example: ACCC steps up merger enforcement in 2026",
-        "url": "https://www.nortonrosefulbright.com/en-au/knowledge/publications/example-slug",
+        "url": "https://example.com/insights/example-slug",
         "date": "15 July 2026",
         "topic": "Mergers, ACCC",
         "teaser": "Short one-line description shown under the row.",
-        "notes": "Example only — inside _example so it is ignored. Copy this shape under a real firm-name key to activate."
+        "notes": "Example only — inside _example so it is ignored."
       }
     ]
-  }
+  },
+  "Herbert Smith Freehills Kramer": [
+    {
+      "title": "New ACCC merger guidance for PE fund notification waivers – finding the balance in disclosure",
+      "url": "https://www.hsfkramer.com/insights/2026-06/new-accc-merger-guidance-for-pe-fund-notification-waivers-finding-the-balance-in-disclosure",
+      "date": "1 July 2026",
+      "topic": "Mergers, ACCC"
+    },
+    {
+      "title": "Australia's Foreign Investment Framework: Proposed Reforms Signal Streamlining",
+      "url": "https://www.hsfkramer.com/insights/2026-06/foreign-investment-framework-proposed-reforms-signal-streamlining",
+      "date": "4 June 2026",
+      "topic": "Foreign Investment, FIRB"
+    },
+    {
+      "title": "ACCC releases 2026–27 Enforcement Priorities",
+      "url": "https://www.hsfkramer.com/insights/2026-02/accc-enforcement-priorities",
+      "date": "19 February 2026",
+      "topic": "ACCC, Enforcement & Penalties"
+    },
+    {
+      "title": "Navigating Australia's Foreign Direct Investment Regime",
+      "url": "https://www.hsfkramer.com/insights/2024-01/navigating-australias-foreign-direct-investment-regime",
+      "date": "10 July 2026",
+      "topic": "Foreign Investment, FIRB"
+    },
+    {
+      "title": "APAC Litigation Risk – Class Actions and Consumer Trends",
+      "url": "https://www.hsfkramer.com/insights/2026-07/apac-litigation-risk-class-actions-and-consumer-trends",
+      "date": "21 July 2026",
+      "topic": "Consumer Law, Class Actions"
+    }
+  ]
 }

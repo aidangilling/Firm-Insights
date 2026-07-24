@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-24T00:25:33.353Z",
-  "recordCount": 90,
+  "generatedAt": "2026-07-24T00:49:29.182Z",
+  "recordCount": 109,
   "firms": [
     {
       "name": "Addisons",
@@ -356,8 +356,136 @@
       },
       "sourceUrl": "https://www.mallesons.com/au/en/insights/latest-thinking.html?page=1",
       "domestic": true,
-      "manualOnly": true,
-      "records": []
+      "manualOnly": false,
+      "records": [
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "Loan behold: non-bank lenders to join the Consumer Data Right",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/loan-behold-non-bank-lenders-to-join-the-consumer-data-right.html",
+          "dateISO": "2026-07-22",
+          "dateText": "22 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "Control, Alt, Relief: Parliament clarifies the merger rulebook",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/control-alt-relief-parliament-clarifies-the-merger-rulebook.html",
+          "dateISO": "2026-07-07",
+          "dateText": "7 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "Merger reform: one quarter in - the good, the bad and the ugly",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/merger-reform-one-quarter-in-the-good-the-bad-and-the-ugly.html",
+          "dateISO": "2026-04-29",
+          "dateText": "29 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "New ACCC mandatory notification thresholds commence: bright-line voting power & standalone asset thresholds",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/new-accc-mandatory-notification-thresholds-commence-bright-line-voting-power-and-standalone-asset-thresholds.html",
+          "dateISO": "2026-04-01",
+          "dateText": "1 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "ACCC",
+          "topics": [
+            "ACCC"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "ACCC Merger Clearance: letters from the front",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/accc-merger-clearance-letters-from-the-front.html",
+          "dateISO": "2026-03-12",
+          "dateText": "12 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers",
+            "ACCC"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "Regulation, rigor and responsibility - The ACCC's expectation in 2026",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/regulation-rigor-and-responsibility-the-acccs-expectation-in-2026.html",
+          "dateISO": "2026-02-19",
+          "dateText": "19 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "ACCC",
+          "topics": [
+            "ACCC"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "King & Wood Mallesons",
+          "title": "Unfair trading practices: Arriving mid-2027 – but UTP-style enforcement has already landed",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/unfair-trading-practices-arriving-mid-2027-but-utp-style-enforcement-has-already-landed.html",
+          "dateISO": "2026-02-10",
+          "dateText": "10 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Unfair Trading",
+          "topics": [
+            "Unfair Trading"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Gilbert + Tobin",
@@ -1222,8 +1350,139 @@
       },
       "sourceUrl": "https://www.bakermckenzie.com/en/insight",
       "domestic": false,
-      "manualOnly": true,
-      "records": []
+      "manualOnly": false,
+      "records": [
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Scams Prevention – Draft Code and Rules Released",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
+          "dateISO": "2026-06-17",
+          "dateText": "17 June 2026",
+          "month": "June 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "The Government released draft SPF codes and rules for consultation and confirmed timeframe for implementation.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Budget Bites — “Nuisance Tariffs” and Trusted Trader Program",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/05/australia-budget-bites-nuisance-tariffs-and-trusted-trader-program",
+          "dateISO": "2026-05-12",
+          "dateText": "12 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Government’s measures in regard to abolishing Nuisance Tariffs and expanding the Trusted Trader program.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Budget Bites — R&D Tax Incentive",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/05/australia-budget-bites-rd-tax-incentive",
+          "dateISO": "2026-05-12",
+          "dateText": "12 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines the R&D tax incentive measures in this year's budget.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Budget Bites — Renewables",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/05/australia-budget-bites-renewables",
+          "dateISO": "2026-05-12",
+          "dateText": "12 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines measures related to Australia's energy transition journey in this year's ...",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Tightening the Belt – ASIC Consults on NTA",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/04/australia-tightening-the-belt-asic-consults-on-nta",
+          "dateISO": "2026-04-07",
+          "dateText": "7 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "ASIC's CP 388 proposes higher NTA requirements for responsible entities, impacting funds, IDPS and CCIVs, with feedback due April 2026.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: ACCC's 2026-27 Compliance and Enforcement Priorities",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/02/australia-acccs-2026-27-compliance-and-enforcement-priorities",
+          "dateISO": "2026-02-25",
+          "dateText": "25 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Competition, ACCC, Consumer Law",
+          "topics": [
+            "Competition",
+            "ACCC",
+            "Consumer Law"
+          ],
+          "teaser": "ACCC outlines key competition and consumer law focus areas",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Proposed ACL Unfair Trading Reforms",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/02/australia-proposed-acl-unfair-trading-reforms",
+          "dateISO": "2026-02-20",
+          "dateText": "20 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "Consumer Law, Unfair Trading, Pricing",
+          "topics": [
+            "Consumer Law",
+            "Unfair Trading",
+            "Pricing"
+          ],
+          "teaser": "Treasury's draft bill would amend Australian Consumer Law to ban unfair trading, curb subscriptions and drip pricing from 1 July 2027.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Bird & Bird",
@@ -1409,18 +1668,6 @@
       ]
     },
     {
-      "name": "Norton Rose Fulbright",
-      "order": 8,
-      "badge": {
-        "initial": "N",
-        "color": "#7a2e3a"
-      },
-      "sourceUrl": "https://www.nortonrosefulbright.com/en-au/knowledge/publications",
-      "domestic": false,
-      "manualOnly": false,
-      "records": []
-    },
-    {
       "name": "Herbert Smith Freehills Kramer",
       "order": 9,
       "badge": {
@@ -1430,7 +1677,98 @@
       "sourceUrl": "https://www.hsfkramer.com/insights/insights-listing",
       "domestic": false,
       "manualOnly": true,
-      "records": []
+      "records": [
+        {
+          "firm": "Herbert Smith Freehills Kramer",
+          "title": "APAC Litigation Risk – Class Actions and Consumer Trends",
+          "permalink": "https://www.hsfkramer.com/insights/2026-07/apac-litigation-risk-class-actions-and-consumer-trends",
+          "dateISO": "2026-07-21",
+          "dateText": "21 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Consumer Law, Class Actions",
+          "topics": [
+            "Consumer Law, Class Actions"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": true,
+          "notes": "Manually added"
+        },
+        {
+          "firm": "Herbert Smith Freehills Kramer",
+          "title": "Navigating Australia's Foreign Direct Investment Regime",
+          "permalink": "https://www.hsfkramer.com/insights/2024-01/navigating-australias-foreign-direct-investment-regime",
+          "dateISO": "2026-07-10",
+          "dateText": "10 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Foreign Investment, FIRB",
+          "topics": [
+            "Foreign Investment, FIRB"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": true,
+          "notes": "Manually added"
+        },
+        {
+          "firm": "Herbert Smith Freehills Kramer",
+          "title": "New ACCC merger guidance for PE fund notification waivers – finding the balance in disclosure",
+          "permalink": "https://www.hsfkramer.com/insights/2026-06/new-accc-merger-guidance-for-pe-fund-notification-waivers-finding-the-balance-in-disclosure",
+          "dateISO": "2026-07-01",
+          "dateText": "1 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers, ACCC"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": true,
+          "notes": "Manually added"
+        },
+        {
+          "firm": "Herbert Smith Freehills Kramer",
+          "title": "Australia's Foreign Investment Framework: Proposed Reforms Signal Streamlining",
+          "permalink": "https://www.hsfkramer.com/insights/2026-06/foreign-investment-framework-proposed-reforms-signal-streamlining",
+          "dateISO": "2026-06-04",
+          "dateText": "4 June 2026",
+          "month": "June 2026",
+          "year": 2026,
+          "topic": "Foreign Investment, FIRB",
+          "topics": [
+            "Foreign Investment, FIRB"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": true,
+          "notes": "Manually added"
+        },
+        {
+          "firm": "Herbert Smith Freehills Kramer",
+          "title": "ACCC releases 2026–27 Enforcement Priorities",
+          "permalink": "https://www.hsfkramer.com/insights/2026-02/accc-enforcement-priorities",
+          "dateISO": "2026-02-19",
+          "dateText": "19 February 2026",
+          "month": "February 2026",
+          "year": 2026,
+          "topic": "ACCC, Enforcement & Penalties",
+          "topics": [
+            "ACCC, Enforcement & Penalties"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": true,
+          "notes": "Manually added"
+        }
+      ]
     },
     {
       "name": "Gadens",
