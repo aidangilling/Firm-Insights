@@ -63,6 +63,22 @@ export async function fetchJson(url, opts) {
 
 export const clean = (s) => (s || "").replace(/\s+/g, " ").trim();
 
+/** Strip HTML tags + decode the common entities seen in CMS titles/excerpts. */
+export function stripHtml(s) {
+  return clean(
+    String(s || "")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&#0?38;/g, "&")
+      .replace(/&#8217;|&#8216;|&rsquo;|&lsquo;/g, "'")
+      .replace(/&#8220;|&#8221;|&rdquo;|&ldquo;|&quot;/g, '"')
+      .replace(/&#8211;|&ndash;/g, "–")
+      .replace(/&#8212;|&mdash;/g, "—")
+      .replace(/&hellip;|&#8230;/g, "…")
+  );
+}
+
 const MONTHS_FULL = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",

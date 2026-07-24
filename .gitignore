@@ -8,3 +8,12 @@ npm-debug.log*
 *.png
 scratchpad/
 .claude/
+Firm Badges/
+
+# …but DO track the firm logo badges used by the site.
+!assets/logos/
+!assets/logos/*.png
+!assets/logos/*.jpg
+!assets/logos/*.jpeg
+!assets/logos/*.webp
+!assets/logos/*.svg

@@ -83,9 +83,9 @@ async function fetchRecords({ previousByUrl } = {}) {
 }
 
 export default {
-  name: "King & Wood Mallesons",
+  name: "Mallesons",
   order: 3,
-  badge: { initial: "K", color: "#3b2a6b" },
+  badge: { initial: "M", color: "#3b2a6b" },
   sourceUrl: "https://www.mallesons.com/au/en/insights/latest-thinking.html?page=1",
   domestic: true,
   fetchRecords,

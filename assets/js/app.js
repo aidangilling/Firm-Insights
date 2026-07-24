@@ -56,18 +56,42 @@
   }
 
   // ---- global filter state ----------------------------------------------
-  var G = { firm: new Set(), topic: new Set(), year: new Set() };
+  var G = { topic: new Set(), date: new Set() };
   var firmControllers = []; // one per firm section, each with a redraw()
+  var REF_ISO = null; // reference "today" for date ranges (from generatedAt)
 
   function anyGlobalActive() {
-    return G.firm.size || G.topic.size || G.year.size;
+    return G.topic.size || G.date.size;
   }
 
+  // Date-range values → the earliest ISO date they include (relative to REF_ISO).
+  function isoMinusMonths(refISO, n) {
+    var d = new Date(refISO + "T00:00:00Z");
+    d.setUTCMonth(d.getUTCMonth() - n);
+    return d.toISOString().slice(0, 10);
+  }
+  function dateThreshold(value) {
+    if (!REF_ISO) return "0000-01-01";
+    if (value === "1m") return isoMinusMonths(REF_ISO, 1);
+    if (value === "3m") return isoMinusMonths(REF_ISO, 3);
+    if (value === "6m") return isoMinusMonths(REF_ISO, 6);
+    if (value === "year") return REF_ISO.slice(0, 4) + "-01-01";
+    return "0000-01-01";
+  }
+  var DATE_FILTERS = [
+    { value: "1m", label: "Last month" },
+    { value: "3m", label: "Last 3 months" },
+    { value: "6m", label: "Last 6 months" },
+    { value: "year", label: "This year" },
+  ];
+
   function matchesGlobal(r) {
-    if (G.firm.size && !G.firm.has(r.firm)) return false;
-    if (G.year.size && !G.year.has(String(r.year))) return false;
     if (G.topic.size && !recTopics(r).some(function (t) { return G.topic.has(t); }))
       return false;
+    if (G.date.size) {
+      var val = G.date.values().next().value; // single-select
+      if (!r.dateISO || r.dateISO < dateThreshold(val)) return false;
+    }
     return true;
   }
 
@@ -82,13 +106,6 @@
 
   function renderOverview(overviewEl, firms, allRecords, stamp) {
     var total = allRecords.length;
-
-    // By Firm — in the firms' given order.
-    var firmRows = firms
-      .map(function (f) {
-        return facetRow("firm", f.name, f.name, f.records.length);
-      })
-      .join("");
 
     // By Topic — count each topic across all records, desc then name.
     var topicCounts = {};
@@ -105,46 +122,46 @@
       .map(function (t) { return facetRow("topic", t, t, topicCounts[t]); })
       .join("");
 
-    // By Year — newest first.
-    var yearCounts = {};
-    allRecords.forEach(function (r) {
-      var y = r.year != null ? String(r.year) : "—";
-      yearCounts[y] = (yearCounts[y] || 0) + 1;
-    });
-    var years = Object.keys(yearCounts)
-      .filter(function (y) { return y !== "—"; })
-      .sort(function (a, b) { return Number(b) - Number(a); });
-    var yearRows = years
-      .map(function (y) { return facetRow("year", y, y, yearCounts[y]); })
-      .join("");
+    // By Date — count records within each range (relative to REF_ISO).
+    var dateRows = DATE_FILTERS.map(function (d) {
+      var th = dateThreshold(d.value);
+      var n = allRecords.filter(function (r) { return r.dateISO && r.dateISO >= th; }).length;
+      return facetRow("date", d.value, d.label, n);
+    }).join("");
 
     overviewEl.innerHTML =
       '<div class="stats">' +
         '<div class="statgroup statgroup--headline">' +
-          "<h3>Total Insights</h3>" +
+          "<h3>Total Articles</h3>" +
           '<div class="big" id="headline-total">' + total + "</div>" +
           '<div class="sub" id="headline-sub">across ' + firms.length +
           " firms · as at " + esc(stamp) + "</div>" +
         "</div>" +
-        '<div class="statgroup statgroup--scroll"><h3>By Firm</h3>' +
-          '<div class="statgroup__scrollbody">' + firmRows + "</div></div>" +
-        '<div class="statgroup statgroup--scroll"><h3>By Topic</h3>' +
+        '<div class="statgroup statgroup--scroll statgroup--wide"><h3>By Topic</h3>' +
           '<div class="statgroup__scrollbody">' + topicRows + "</div></div>" +
-        '<div class="statgroup statgroup--scroll"><h3>By Year</h3>' +
-          '<div class="statgroup__scrollbody">' + yearRows + "</div></div>" +
+        '<div class="statgroup"><h3>By Date</h3>' + dateRows + "</div>" +
       "</div>" +
       '<div class="global-bar">' +
         '<button type="button" class="clear-filters" id="clear-all" hidden>Clear all filters ✕</button>' +
         '<span class="count" id="global-count"></span>' +
-      "</div>" +
-      '<p class="asat">Data as at <strong>' + esc(stamp) +
-        "</strong> (Australia/Sydney).</p>";
+      "</div>";
 
     // Wire the clickable stat rows.
     overviewEl.querySelectorAll(".statrow.selectable").forEach(function (rowEl) {
       function toggle() {
-        var set = G[rowEl.dataset.facet];
+        var facet = rowEl.dataset.facet;
         var value = rowEl.dataset.value;
+        var set = G[facet];
+        // Date is single-select: clear the other date rows first.
+        if (facet === "date") {
+          overviewEl.querySelectorAll('.statrow.selectable[data-facet="date"]').forEach(function (o) {
+            if (o !== rowEl) {
+              o.classList.remove("active");
+              o.setAttribute("aria-pressed", "false");
+              G.date.delete(o.dataset.value);
+            }
+          });
+        }
         if (set.has(value)) set.delete(value);
         else set.add(value);
         var on = set.has(value);
@@ -159,7 +176,7 @@
     });
 
     document.getElementById("clear-all").addEventListener("click", function () {
-      G.firm.clear(); G.topic.clear(); G.year.clear();
+      G.topic.clear(); G.date.clear();
       overviewEl.querySelectorAll(".statrow.selectable.active").forEach(function (el) {
         el.classList.remove("active");
         el.setAttribute("aria-pressed", "false");
@@ -172,12 +189,13 @@
   // ---- one firm section --------------------------------------------------
   function badgeHtml(badge, name) {
     if (badge && badge.logo) {
-      return '<span class="firm-badge"><img src="' + esc(badge.logo) +
+      var tileBg = badge.tile ? ' style="background:' + esc(badge.tile) + '"' : "";
+      return '<span class="firm-badge"' + tileBg + '><img src="' + esc(badge.logo) +
         '" alt="' + esc(name) + ' logo" /></span>';
     }
     var color = (badge && badge.color) || "#333333";
     var initial = (badge && badge.initial) || (name || "?").charAt(0);
-    return '<span class="firm-badge" style="background:' + esc(color) + '">' +
+    return '<span class="firm-badge firm-badge--mono" style="background:' + esc(color) + '">' +
       esc(initial) + "</span>";
   }
 
@@ -247,9 +265,8 @@
       '<div class="firm-head">' +
         badgeHtml(firm.badge, firm.name) +
         "<h2>" + esc(firm.name) + "</h2>" +
-        '<span class="firm-count"></span>' +
-        '<span class="firm-source"><a href="' + esc(firm.sourceUrl) +
-          '" rel="noopener" target="_blank">Insights ↗</a></span>' +
+        '<a class="firm-source-link" href="' + esc(firm.sourceUrl) +
+          '" rel="noopener" target="_blank">Visit insights ↗</a>' +
       "</div>" +
       '<div class="toolbar">' +
         '<div class="search"><input type="search" placeholder="Search ' +
@@ -264,7 +281,6 @@
     var tbody = section.querySelector("tbody");
     var ths = section.querySelectorAll("thead th");
     var countEl = section.querySelector(".toolbar .count");
-    var firmCountEl = section.querySelector(".firm-count");
     var searchEl = section.querySelector('input[type="search"]');
 
     var state = { sortKey: "dateISO", dir: -1, query: "" };
@@ -299,7 +315,6 @@
       section.classList.toggle("is-hidden", hide);
 
       countEl.textContent = rows.length + " of " + firm.records.length;
-      firmCountEl.textContent = "(" + firm.records.length + ")";
 
       if (!rows.length) {
         var msg = "No matching items.";
@@ -406,6 +421,7 @@
         var firms = Array.isArray(data.firms) ? data.firms : [];
         var generatedAt = data.generatedAt || new Date().toISOString();
         var stamp = fmtFullSydney(generatedAt);
+        REF_ISO = generatedAt.slice(0, 10); // reference "today" for date ranges
 
         // Attach firm name onto each record for global filtering.
         var allRecords = [];
@@ -417,6 +433,13 @@
 
         var firmsEl = document.getElementById("firms");
         firms.forEach(function (f) { renderFirm(firmsEl, f); });
+
+        // Footer timestamp line.
+        var fa = document.getElementById("footer-asat");
+        if (fa) {
+          fa.innerHTML = "This website covers all competition and consumer law articles published as at <strong>" +
+            esc(stamp) + "</strong> (Australia/Sydney).";
+        }
 
         // Footer source links.
         var srcEl = document.getElementById("source-links");

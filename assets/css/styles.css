@@ -114,9 +114,20 @@ a:hover {
 }
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-bottom: 6px;
+}
+.statgroup--wide {
+  grid-column: span 2;
+}
+@media (max-width: 860px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .statgroup--wide {
+    grid-column: auto;
+  }
 }
 .statgroup {
   background: var(--card);
@@ -255,27 +266,40 @@ a:hover {
   border-bottom: 3px solid var(--orange);
   padding-bottom: 10px;
 }
+/* Logo badge — a white tile of consistent HEIGHT so wordmark logos read well. */
 .firm-badge {
   flex: 0 0 auto;
-  width: 44px;
-  height: 44px;
+  height: 46px;
+  min-width: 46px;
+  max-width: 190px;
+  padding: 6px 12px;
   border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.firm-badge img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+/* Monogram fallback (firms with no supplied logo). */
+.firm-badge--mono {
+  width: 46px;
+  min-width: 46px;
+  padding: 0;
   color: #fff;
   font-family: var(--serif);
   font-weight: 700;
   font-size: 22px;
   line-height: 1;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-.firm-badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #fff;
+  border: none;
 }
 .firm-head h2 {
   font-family: var(--serif);
@@ -285,14 +309,20 @@ a:hover {
   color: var(--gray);
   flex: 1 1 auto;
 }
-.firm-head .firm-count {
-  font-size: 13px;
-  color: var(--muted);
+.firm-head .firm-source-link {
+  flex: 0 0 auto;
   white-space: nowrap;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--orange);
+  padding: 7px 14px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
 }
-.firm-head .firm-source {
-  font-size: 12.5px;
-  white-space: nowrap;
+.firm-head .firm-source-link:hover {
+  background: var(--orange-deep);
+  text-decoration: none;
 }
 
 /* Toolbar (per-firm search) ----------------------------------------------- */
@@ -474,10 +504,14 @@ td.nowrap {
   font-size: 13px;
 }
 .site-footer p {
-  margin: 0;
+  margin: 0 0 10px;
 }
 .site-footer a {
   margin-right: 4px;
+}
+.footer-asat {
+  font-size: 13.5px;
+  color: var(--ink);
 }
 
 .loading {

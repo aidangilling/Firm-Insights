@@ -14,7 +14,7 @@ Live site: <https://aidangilling.github.io/firm-insights/>
 
 ---
 
-## The 10 firms
+## The 18 firms
 
 Shown in this order (Addisons first). "Method" is how each firm's competition /
 consumer list is fetched — wherever possible, from the firm's **own** practice /
@@ -25,20 +25,29 @@ is included (not just keyword matches).
 |---|------|--------|
 | 1 | Addisons | WordPress REST (`td_insights`) ∪ its "Competition, Consumer & Antitrust" capability tag |
 | 2 | Allens | Server-rendered search filtered to its "Competition, Consumer & Regulatory" practice (`t=262`) |
-| 3 | King & Wood Mallesons | Headless Chromium (passes Cloudflare) → its "Competition & Antitrust" practice page + per-article JSON-LD dates |
+| 3 | Mallesons | Headless Chromium (passes Cloudflare) → its "Competition & Antitrust" practice page + per-article JSON-LD dates |
 | 4 | Gilbert + Tobin | Headless Chromium → Funnelback JSON; per-article "service" tag = competition ∪ keywords |
-| 5 | Ashurst | Sitecore SXA JSON — Australia × Antitrust/Competition + Products/Consumer practices |
-| 6 | Baker McKenzie | Sitecore insights API — Australia × Antitrust & Consumer practices + AU keyword queries |
-| 7 | Bird & Bird | Solr JSON — Australia × competition/consumer/merger practice facets |
-| 8 | Herbert Smith Freehills Kramer | **Manual** (hard Cloudflare block that headless can't pass) |
-| 9 | Gadens | Theme AJAX → its "Competition, Consumer and Trade Law" practice (all 145) + per-article JSON-LD dates |
-| 10 | Corrs Chambers Westgarth | Elastic App Search — Competition capabilities + recent insights + SSR homepage (per-article dates) |
+| 5 | MinterEllison | JWT-gated Solr API for its "Competition, Consumer & Regulation" practice |
+| 6 | Clayton Utz | Azure Cognitive Search JSON — competition/consumer expertise tags |
+| 7 | Ashurst | Sitecore SXA JSON — Australia × Antitrust/Competition + Products/Consumer practices |
+| 8 | Baker McKenzie | Sitecore insights API — Australia × Antitrust & Consumer practices + AU keyword queries |
+| 9 | Bird & Bird | Solr JSON — Australia × competition/consumer/merger practice facets |
+| 10 | Herbert Smith Freehills Kramer | **Manual** (hard Cloudflare block that headless can't pass) |
+| 11 | Gadens | Theme AJAX → its "Competition, Consumer and Trade Law" practice + per-article JSON-LD dates |
+| 12 | Corrs Chambers Westgarth | Elastic App Search — Competition capabilities + recent insights + SSR homepage |
+| 13 | Dentons | ASMX (base64+gzip) — **Sydney** × Competition practice + Sydney keyword pass |
+| 14 | Maddocks | Headless Chromium (passes Cloudflare) → Craft listing partial for its Competition/Antitrust capability |
+| 15 | DLA Piper | Headless Chromium (passes Vercel challenge) → en-au (Australia) insights, competition-filtered (best-effort) |
+| 16 | Hall & Wilcox | Craft GraphQL — its "Competition and Consumer Law" service |
+| 17 | Macpherson Kelley | WordPress REST — its "competition and consumer" expertise taxonomy |
+| 18 | Mills Oakley | WordPress REST — its "Competition, Regulatory and Risk" practice + keyword pass |
 
 Every firm except **HSF Kramer** updates itself twice daily. HSF Kramer sits
 behind a Cloudflare challenge headless browsers can't pass, so its table is
-filled from `manual-entries.json` — see *Adding entries by hand* below.
-(Norton Rose Fulbright was dropped — it publishes no findable Australian
-competition/consumer content in its feed.)
+filled from `manual-entries.json` — see *Adding entries by hand* below. Firms
+marked "Headless Chromium" need the Playwright browser (installed in CI).
+(Norton Rose Fulbright was dropped — no findable Australian competition/consumer
+content in its feed.)
 
 ## How the selection works
 
