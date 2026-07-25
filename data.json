@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-25T07:15:20.551Z",
-  "recordCount": 160,
+  "generatedAt": "2026-07-25T14:42:12.594Z",
+  "recordCount": 163,
   "firms": [
     {
       "name": "Addisons",
@@ -1702,6 +1702,24 @@
       "records": [
         {
           "firm": "Baker McKenzie",
+          "title": "AI Governance Tracker",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/resources/ai-governance-tracker",
+          "dateISO": "2026-06-24",
+          "dateText": "24 June 2026",
+          "month": "June 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Our AI Governance Tracker is a regularly updated, practical tool that compares global AI regulations and key guiding principles.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
           "dateISO": "2026-06-17",
@@ -3162,6 +3180,42 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Mills Oakley",
+          "title": "Bed Bath N’ Branding: The High Court on Branding, Reputation and Consumer Confusion",
+          "permalink": "https://www.millsoakley.com.au/insights/bed-bath-n-branding-the-high-court-on-branding-reputation-and-consumer-confusion/",
+          "dateISO": "2026-07-16",
+          "dateText": "16 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "The Australian High Court has recently confirmed that reputation in a brand can give rise to enforceable rights under the Australian Consumer Law and passing off, even where the relevant conduct does not infringe a registered trade mark.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Mills Oakley",
+          "title": "Payroll compliance under Australian Employment Law – why does it cause issues on M&A deals, and what can you do about it?",
+          "permalink": "https://www.millsoakley.com.au/insights/payroll-compliance-under-australian-employment-law-why-does-it-cause-issues-on-ma-deals-and-what-can-you-do-about-it/",
+          "dateISO": "2026-05-05",
+          "dateText": "5 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Mills Oakley",
           "title": "Academic cheating services, “work” and the limits of the TEQSA Act in the age of generative AI: TEQSA v Chegg",
