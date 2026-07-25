@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-25T14:42:12.594Z",
-  "recordCount": 163,
+  "generatedAt": "2026-07-25T21:48:04.945Z",
+  "recordCount": 162,
   "firms": [
     {
       "name": "Addisons",
@@ -1700,24 +1700,6 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
-        {
-          "firm": "Baker McKenzie",
-          "title": "AI Governance Tracker",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/resources/ai-governance-tracker",
-          "dateISO": "2026-06-24",
-          "dateText": "24 June 2026",
-          "month": "June 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Our AI Governance Tracker is a regularly updated, practical tool that compares global AI regulations and key guiding principles.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
         {
           "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
