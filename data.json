@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-27T08:28:26.763Z",
-  "recordCount": 162,
+  "generatedAt": "2026-07-27T22:01:13.394Z",
+  "recordCount": 158,
   "firms": [
     {
       "name": "Addisons",
@@ -1196,8 +1196,8 @@
         },
         {
           "firm": "Ashurst",
-          "title": "Antitrust and Competition Compass",
-          "permalink": "https://www.ashurstperkinscoie.com/en/insights/competition-compass---antitrust-law-on-merger-issues-for-international/",
+          "title": "Antitrust and competition issues in international transactions",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/cross-border-merger-control-in-2026/",
           "dateISO": "2026-07-20",
           "dateText": "20 July 2026",
           "month": "July 2026",
@@ -1206,7 +1206,7 @@
           "topics": [
             "Competition"
           ],
-          "teaser": "Welcome to the inaugural edition of Ashurst Perkins Coie's \"Competition Compass\".",
+          "teaser": "Welcome to the inaugural edition of Ashurst Perkins Coie's new publication covering the developments, trends, and enforcement themes shaping global antitrust policy and competition.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -3161,80 +3161,7 @@
       "sourceUrl": "https://www.millsoakley.com.au/recent-insights/",
       "domestic": true,
       "manualOnly": false,
-      "records": [
-        {
-          "firm": "Mills Oakley",
-          "title": "Bed Bath N’ Branding: The High Court on Branding, Reputation and Consumer Confusion",
-          "permalink": "https://www.millsoakley.com.au/insights/bed-bath-n-branding-the-high-court-on-branding-reputation-and-consumer-confusion/",
-          "dateISO": "2026-07-16",
-          "dateText": "16 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Consumer Law",
-          "topics": [
-            "Consumer Law"
-          ],
-          "teaser": "The Australian High Court has recently confirmed that reputation in a brand can give rise to enforceable rights under the Australian Consumer Law and passing off, even where the relevant conduct does not infringe a registered trade mark.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Mills Oakley",
-          "title": "Payroll compliance under Australian Employment Law – why does it cause issues on M&A deals, and what can you do about it?",
-          "permalink": "https://www.millsoakley.com.au/insights/payroll-compliance-under-australian-employment-law-why-does-it-cause-issues-on-ma-deals-and-what-can-you-do-about-it/",
-          "dateISO": "2026-05-05",
-          "dateText": "5 May 2026",
-          "month": "May 2026",
-          "year": 2026,
-          "topic": "Mergers",
-          "topics": [
-            "Mergers"
-          ],
-          "teaser": "",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Mills Oakley",
-          "title": "Academic cheating services, “work” and the limits of the TEQSA Act in the age of generative AI: TEQSA v Chegg",
-          "permalink": "https://www.millsoakley.com.au/insights/academic-cheating-services-work-and-the-limits-of-the-teqsa-act-in-the-age-of-generative-ai-teqsa-v-chegg/",
-          "dateISO": "2026-04-16",
-          "dateText": "16 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "This decision highlights a growing gap in Australia’s academic integrity laws, as the Chief Executive Officer of the Tertiary Education Quality and Standards Agency v Chegg, Inc. exposes the limits of existing legislation in addressing AI-driven cheating services.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Mills Oakley",
-          "title": "“Critical to the resolution of the dispute” by early settlement: Victorian Supreme Court case explores parties’ disclosure obligations under section 26 of the CPA",
-          "permalink": "https://www.millsoakley.com.au/insights/critical-to-the-resolution-of-the-dispute-includes-early-settlement-victorian-supreme-court-sheds-further-light-on-parties-obligations-to-disclose-critical-documents-under-section/",
-          "dateISO": "2026-03-27",
-          "dateText": "27 March 2026",
-          "month": "March 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "The Victorian Supreme Court in Tambanis v OrthoDx Holdings Ltd considered whether “critical documents” under s.26 of the Civil Procedure Act 2010 (Vic) extend beyond issues of liability to include material relevant to relief, and whether documents that facilitate early settlement are critical documents, even if they are not strictly discoverable.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        }
-      ]
+      "records": []
     }
   ]
 }
