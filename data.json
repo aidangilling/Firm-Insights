@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-27T22:01:13.394Z",
-  "recordCount": 158,
+  "generatedAt": "2026-07-28T07:38:16.958Z",
+  "recordCount": 161,
   "firms": [
     {
       "name": "Addisons",
@@ -1702,6 +1702,60 @@
       "records": [
         {
           "firm": "Baker McKenzie",
+          "title": "Australia: New Modern Slavery Offence Proposed",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-new-modern-slavery-offence-proposed",
+          "dateISO": "2026-07-20",
+          "dateText": "20 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Australia plans tougher modern slavery laws, including a new failure-to-prevent offence",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: AI Workplace Change – Managing Risks without Regret",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
+          "dateISO": "2026-07-17",
+          "dateText": "17 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Directors' Duties in Australia – FY27 Edition",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-directors-duties-in-australia-fy27-edition",
+          "dateISO": "2026-07-07",
+          "dateText": "7 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Baker McKenzie&apos;s FY27 Directors&apos; Duties guide outlines key governance obligations and practical guidance on cyber, AI and environmental risks.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
           "dateISO": "2026-06-17",
@@ -1767,6 +1821,24 @@
             "Competition & Consumer"
           ],
           "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines measures related to Australia's energy transition journey in this year's ...",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Victoria's Security of Payment regime overhauled",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/04/australia-victorias-security-of-payment-regime-overhauled",
+          "dateISO": "2026-04-30",
+          "dateText": "30 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Major amendments to Victoria&apos;s Security of Payment Act have started, reshaping payment claims, adjudication risk and security in construction projects.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -2513,44 +2585,7 @@
       "sourceUrl": "https://www.dentons.com/en/insights?Filters=%26regionid%3D5CFDCB74SYDNE",
       "domestic": false,
       "manualOnly": false,
-      "records": [
-        {
-          "firm": "Dentons",
-          "title": "Australia ESG Bulletin – April 2026",
-          "permalink": "https://www.dentons.com/en/insights/newsletters/2026/april/22/australia-esg-bulletin/australia-esg-bulletin-april-2026",
-          "dateISO": "2026-04-23",
-          "dateText": "23 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Greenwashing",
-          "topics": [
-            "Greenwashing"
-          ],
-          "teaser": "Australia: 2025 saw global divergence in ESG regulation, which is reflected in Australia's recent reforms. In the last year, Australia has implemented mandatory climate reporting and increased prosecutions for greenwashing, while environmental reforms have been passed with the aim of cutting \"green tape\" and fast-tracking energy projects. Organisations doing business in Australia need to be aware of the changing laws, and implications for their internal ESG policies and sustainability goals.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Dentons",
-          "title": "Beyond PAYG: Recent developments and upcoming changes for employers",
-          "permalink": "https://www.dentons.com/en/insights/articles/2026/april/14/beyond-payg-recent-and-upcoming-developments-in-employer-obligations",
-          "dateISO": "2026-04-14",
-          "dateText": "14 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australia: Recent cases and legislative reforms have expanded employer tax obligations across multiple fronts, increasing cost, complexity and compliance risk for a wide range of businesses. This article highlights three recent developments with direct consequences for employers.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        }
-      ]
+      "records": []
     },
     {
       "name": "Maddocks",
@@ -2564,6 +2599,24 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Maddocks",
+          "title": "Maddocks advises founders of Yo My Goodness on investment by River Capital",
+          "permalink": "https://www.maddocks.com.au/insights/maddocks-advises-founders-of-yo-my-goodness-on-investment-by-river-capital",
+          "dateISO": "2026-07-28",
+          "dateText": "28 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Maddocks has advised the founders of Yo My Goodness (YOMG), on an investment by River Capital.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Maddocks",
           "title": "Is this the Prime example of unfair contract terms?",
