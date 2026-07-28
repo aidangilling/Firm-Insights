@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T07:38:16.958Z",
-  "recordCount": 161,
+  "generatedAt": "2026-07-28T15:26:59.779Z",
+  "recordCount": 162,
   "firms": [
     {
       "name": "Addisons",
@@ -633,24 +633,6 @@
         },
         {
           "firm": "Gilbert + Tobin",
-          "title": "‘Click Here’: Australia’s Scam Prevention Framework takes shape",
-          "permalink": "https://www.gtlaw.com.au/insights/click-here-australias-scam-prevention-framework-takes-shape",
-          "dateISO": "2026-06-03",
-          "dateText": "3 June 2026",
-          "month": "June 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Treasury has now revealed how the Scams Prevention Framework will work in practice and proposed a new feature, a reimbursement scheme with a $3,000 threshold and equal liability model which will fundamentally change the commercial risk landscape.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Gilbert + Tobin",
           "title": "New merger regime: first-quarter insights",
           "permalink": "https://www.gtlaw.com.au/insights/new-merger-regime-first-quarter-insights",
           "dateISO": "2026-05-14",
@@ -1178,6 +1160,24 @@
       "records": [
         {
           "firm": "Ashurst",
+          "title": "Class Actions Quickguides",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/quickguides/class-actions-quickguides/",
+          "dateISO": "2026-07-28",
+          "dateText": "28 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Class Actions Quickguides",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
           "title": "Antitrust & Competition newsletter: Q2 2026",
           "permalink": "https://www.ashurstperkinscoie.com/en/insights/antitrust-and-competition-newsletter-q2-2026/",
           "dateISO": "2026-07-23",
@@ -1225,24 +1225,6 @@
             "Consumer Law"
           ],
           "teaser": "Ashurst's Quickguides: our library of legal summaries on a range of key issues relevant to our clients",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Ashurst",
-          "title": "Class Actions Quickguides",
-          "permalink": "https://www.ashurstperkinscoie.com/en/insights/quickguides/class-actions-quickguides/",
-          "dateISO": "2026-07-17",
-          "dateText": "17 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Consumer Law",
-          "topics": [
-            "Consumer Law"
-          ],
-          "teaser": "Class Actions Quickguides",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -1702,60 +1684,6 @@
       "records": [
         {
           "firm": "Baker McKenzie",
-          "title": "Australia: New Modern Slavery Offence Proposed",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-new-modern-slavery-offence-proposed",
-          "dateISO": "2026-07-20",
-          "dateText": "20 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australia plans tougher modern slavery laws, including a new failure-to-prevent offence",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: AI Workplace Change – Managing Risks without Regret",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
-          "dateISO": "2026-07-17",
-          "dateText": "17 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Directors' Duties in Australia – FY27 Edition",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-directors-duties-in-australia-fy27-edition",
-          "dateISO": "2026-07-07",
-          "dateText": "7 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Baker McKenzie&apos;s FY27 Directors&apos; Duties guide outlines key governance obligations and practical guidance on cyber, AI and environmental risks.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
           "dateISO": "2026-06-17",
@@ -1821,24 +1749,6 @@
             "Competition & Consumer"
           ],
           "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines measures related to Australia's energy transition journey in this year's ...",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Victoria's Security of Payment regime overhauled",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/04/australia-victorias-security-of-payment-regime-overhauled",
-          "dateISO": "2026-04-30",
-          "dateText": "30 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Major amendments to Victoria&apos;s Security of Payment Act have started, reshaping payment claims, adjudication risk and security in construction projects.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -2585,7 +2495,44 @@
       "sourceUrl": "https://www.dentons.com/en/insights?Filters=%26regionid%3D5CFDCB74SYDNE",
       "domestic": false,
       "manualOnly": false,
-      "records": []
+      "records": [
+        {
+          "firm": "Dentons",
+          "title": "Australia ESG Bulletin – April 2026",
+          "permalink": "https://www.dentons.com/en/insights/newsletters/2026/april/22/australia-esg-bulletin/australia-esg-bulletin-april-2026",
+          "dateISO": "2026-04-23",
+          "dateText": "23 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Greenwashing",
+          "topics": [
+            "Greenwashing"
+          ],
+          "teaser": "Australia: 2025 saw global divergence in ESG regulation, which is reflected in Australia's recent reforms. In the last year, Australia has implemented mandatory climate reporting and increased prosecutions for greenwashing, while environmental reforms have been passed with the aim of cutting \"green tape\" and fast-tracking energy projects. Organisations doing business in Australia need to be aware of the changing laws, and implications for their internal ESG policies and sustainability goals.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Dentons",
+          "title": "Beyond PAYG: Recent developments and upcoming changes for employers",
+          "permalink": "https://www.dentons.com/en/insights/articles/2026/april/14/beyond-payg-recent-and-upcoming-developments-in-employer-obligations",
+          "dateISO": "2026-04-14",
+          "dateText": "14 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Australia: Recent cases and legislative reforms have expanded employer tax obligations across multiple fronts, increasing cost, complexity and compliance risk for a wide range of businesses. This article highlights three recent developments with direct consequences for employers.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        }
+      ]
     },
     {
       "name": "Maddocks",
@@ -3214,7 +3161,80 @@
       "sourceUrl": "https://www.millsoakley.com.au/recent-insights/",
       "domestic": true,
       "manualOnly": false,
-      "records": []
+      "records": [
+        {
+          "firm": "Mills Oakley",
+          "title": "Bed Bath N’ Branding: The High Court on Branding, Reputation and Consumer Confusion",
+          "permalink": "https://www.millsoakley.com.au/insights/bed-bath-n-branding-the-high-court-on-branding-reputation-and-consumer-confusion/",
+          "dateISO": "2026-07-16",
+          "dateText": "16 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "The Australian High Court has recently confirmed that reputation in a brand can give rise to enforceable rights under the Australian Consumer Law and passing off, even where the relevant conduct does not infringe a registered trade mark.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Mills Oakley",
+          "title": "Payroll compliance under Australian Employment Law – why does it cause issues on M&A deals, and what can you do about it?",
+          "permalink": "https://www.millsoakley.com.au/insights/payroll-compliance-under-australian-employment-law-why-does-it-cause-issues-on-ma-deals-and-what-can-you-do-about-it/",
+          "dateISO": "2026-05-05",
+          "dateText": "5 May 2026",
+          "month": "May 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Mills Oakley",
+          "title": "Academic cheating services, “work” and the limits of the TEQSA Act in the age of generative AI: TEQSA v Chegg",
+          "permalink": "https://www.millsoakley.com.au/insights/academic-cheating-services-work-and-the-limits-of-the-teqsa-act-in-the-age-of-generative-ai-teqsa-v-chegg/",
+          "dateISO": "2026-04-16",
+          "dateText": "16 April 2026",
+          "month": "April 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "This decision highlights a growing gap in Australia’s academic integrity laws, as the Chief Executive Officer of the Tertiary Education Quality and Standards Agency v Chegg, Inc. exposes the limits of existing legislation in addressing AI-driven cheating services.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Mills Oakley",
+          "title": "“Critical to the resolution of the dispute” by early settlement: Victorian Supreme Court case explores parties’ disclosure obligations under section 26 of the CPA",
+          "permalink": "https://www.millsoakley.com.au/insights/critical-to-the-resolution-of-the-dispute-includes-early-settlement-victorian-supreme-court-sheds-further-light-on-parties-obligations-to-disclose-critical-documents-under-section/",
+          "dateISO": "2026-03-27",
+          "dateText": "27 March 2026",
+          "month": "March 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "The Victorian Supreme Court in Tambanis v OrthoDx Holdings Ltd considered whether “critical documents” under s.26 of the Civil Procedure Act 2010 (Vic) extend beyond issues of liability to include material relevant to relief, and whether documents that facilitate early settlement are critical documents, even if they are not strictly discoverable.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        }
+      ]
     }
   ]
 }
