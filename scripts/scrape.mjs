@@ -274,15 +274,18 @@ async function main() {
     // Merge the manual layer for this firm.
     const manualRecs = manual[adapter.name] ? manualToRecords(manual[adapter.name], adapter) : [];
 
-    // Robustness: if the scrape ERRORED (fetch threw → records === null), keep
-    // this firm's previous records rather than wiping them. A successful scrape
-    // that legitimately yields 0 in-window items is accepted as-is (0 is real,
-    // not a failure). Kept-previous records still must satisfy the date window.
-    if (records === null) {
+    // Robustness: keep this firm's previous records when the scrape THREW
+    // (records === null) OR came back empty while we had records before. Many
+    // adapters swallow their own fetch errors and return [] instead of throwing,
+    // so a sudden 0 is almost always a scrape hiccup (datacenter-IP block, 429,
+    // changed markup) — not the firm genuinely deleting everything. Without this
+    // guard, one bad run silently wipes the firm. Kept records still satisfy the
+    // date window.
+    const prevScraped = prev.filter(
+      (r) => !r.overridden && r.dateISO && r.dateISO >= START_DATE
+    );
+    if (records === null || (records.length === 0 && prevScraped.length > 0)) {
       usedPrevious = true;
-      const prevScraped = prev.filter(
-        (r) => !r.overridden && r.dateISO && r.dateISO >= START_DATE
-      );
       records = [...manualRecs, ...prevScraped];
     } else {
       records = [...manualRecs, ...records];
