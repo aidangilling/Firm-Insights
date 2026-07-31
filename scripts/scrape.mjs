@@ -313,21 +313,28 @@ async function main() {
 
   firms.sort((a, b) => (a.order || 0) - (b.order || 0));
 
-  // Change detection: ignore generatedAt churn.
+  // Change detection: compare only the firm records themselves.
   const signature = (fs) =>
     JSON.stringify(fs.map((f) => ({ name: f.name, records: f.records })));
-  if (previous?.firms && signature(previous.firms) === signature(firms)) {
-    console.log(`No change vs last good data.json — nothing to write. (${totalRecords} records)`);
-    return;
-  }
+  const contentChanged = !(previous?.firms && signature(previous.firms) === signature(firms));
+
+  // generatedAt = when content last changed (preserved on quiet runs).
+  // lastCheckedAt = this run's time (bumped every run → live heartbeat).
+  const now = new Date().toISOString();
+  const generatedAt = contentChanged ? now : (previous && previous.generatedAt) || now;
 
   const out = {
-    generatedAt: new Date().toISOString(),
+    generatedAt,
+    lastCheckedAt: now,
     recordCount: totalRecords,
     firms,
   };
   await writeFile(DATA_PATH, JSON.stringify(out, null, 2) + "\n", "utf8");
-  console.log(`Wrote data.json — ${firms.length} firms, ${totalRecords} records.`);
+  console.log(
+    contentChanged
+      ? `Wrote data.json — content changed. ${firms.length} firms, ${totalRecords} records.`
+      : `Wrote data.json — heartbeat only (no new articles). ${totalRecords} records.`
+  );
 }
 
 main().catch((err) => {
