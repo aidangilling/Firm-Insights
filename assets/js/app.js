@@ -423,18 +423,27 @@
     if (sub) sub.textContent = totalShown;
   }
 
-  // ---- staleness ---------------------------------------------------------
-  function checkStaleness(generatedAt) {
+    // ---- heartbeat / freshness --------------------------------------------
+  function checkStaleness(generatedAt, lastCheckedAt) {
     var banner = document.getElementById("staleness");
-    var d = new Date(generatedAt);
-    if (isNaN(d)) return;
-    var ageHours = (Date.now() - d.getTime()) / 3600000;
-    if (ageHours > 24) {
-      banner.textContent =
-        "This digest may be delayed — it refreshes automatically twice daily. " +
-        "The figures below are from the last successful update.";
-      banner.hidden = false;
+    if (!banner) return;
+    lastCheckedAt = lastCheckedAt || generatedAt;
+    function daySydney(iso) {
+      var d = new Date(iso);
+      if (isNaN(d)) return String(iso);
+      try {
+        return new Intl.DateTimeFormat("en-AU", {
+          timeZone: "Australia/Sydney",
+          day: "numeric", month: "long", year: "numeric",
+        }).format(d);
+      } catch (e) { return String(iso).slice(0, 10); }
     }
+    var checked = fmtFullSydney(lastCheckedAt);
+    var sameDay = daySydney(generatedAt) === daySydney(lastCheckedAt);
+    banner.textContent = sameDay
+      ? "Last checked " + checked + "."
+      : "Last checked " + checked + " — no new articles since " + daySydney(generatedAt) + ".";
+    banner.hidden = false;
   }
 
   // ---- boot --------------------------------------------------------------
@@ -487,7 +496,7 @@
         }
 
         updateAll();
-        checkStaleness(generatedAt);
+                checkStaleness(generatedAt, data.lastCheckedAt || generatedAt);
       })
       .catch(function () {
         fail("Could not load insights data (data.json). If this site was just set up, the update workflow may not have run yet.");
