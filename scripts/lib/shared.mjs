@@ -195,6 +195,15 @@ const CONTEXT_RULES = [
   { label: "Enforcement & Penalties", re: /\bpenalt(y|ies)\b|enforcement action|infringement notice|civil penalt|pecuniary penalt/i },
 ];
 
+// A bare mention of "consumer(s)" also qualifies an article (per the brief:
+// lean to include) — EXCEPT where it plainly refers to consumer economics /
+// markets rather than consumer LAW ("consumer confidence", "consumer
+// electronics", "consumer staples"…). Those are almost never ACL matters and
+// would flood the digest, so the word alone does not qualify them; a genuine
+// law angle in the same piece would still be caught by a CORE rule above.
+const CONSUMER_WORD = /\bconsumers?\b/i;
+const CONSUMER_OFFTOPIC = /consumer (confidence|sentiment|spending|demand|price index|prices?|electronics|discretionary|staples|packaged goods)\b|\bCPI\b|\bCPG\b/i;
+
 /** Returns { relevant:boolean, topics:string[] } for a blob of text. */
 export function assessRelevance(text) {
   const t = text || "";
@@ -202,7 +211,13 @@ export function assessRelevance(text) {
   for (const rule of CORE_RULES) {
     if (rule.re.test(t)) topics.push(rule.label);
   }
-  const relevant = topics.length > 0;
+  let relevant = topics.length > 0;
+  // Lean-to-include: a bare "consumer" mention qualifies unless it is only the
+  // economics/markets sense (see CONSUMER_OFFTOPIC).
+  if (!relevant && CONSUMER_WORD.test(t) && !CONSUMER_OFFTOPIC.test(t)) {
+    topics.push("Consumer Law");
+    relevant = true;
+  }
   // Context labels only enrich an already-relevant article.
   if (relevant) {
     for (const rule of CONTEXT_RULES) {
