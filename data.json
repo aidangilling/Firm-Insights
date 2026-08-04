@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-01T21:49:46.376Z",
-  "lastCheckedAt": "2026-08-04T07:36:21.216Z",
-  "recordCount": 166,
+  "generatedAt": "2026-08-04T15:28:35.800Z",
+  "lastCheckedAt": "2026-08-04T15:28:35.800Z",
+  "recordCount": 167,
   "firms": [
     {
       "name": "Addisons",
@@ -561,15 +561,33 @@
           "firm": "Gilbert + Tobin",
           "title": "The Competitive Edge with Gilbert + Tobin",
           "permalink": "https://www.gtlaw.com.au/insights/the-competitive-edge-with-gilbert-tobin",
-          "dateISO": "2026-07-21",
-          "dateText": "21 July 2026",
-          "month": "July 2026",
+          "dateISO": "2026-08-04",
+          "dateText": "4 August 2026",
+          "month": "August 2026",
           "year": 2026,
           "topic": "Competition",
           "topics": [
             "Competition"
           ],
           "teaser": "Tune in to The Competitive Edge, a competition law podcast series discussing the latest matters, trends and insights in Australia and around the world. Each fortnight Moya Dodd and Matt Rubinstein explore insights and trends with our resident",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
+          "title": "Towards solutions, pressing issues in charity law",
+          "permalink": "https://www.gtlaw.com.au/insights/towards-solutions,-pressing-matters-in-charity-law",
+          "dateISO": "2026-08-04",
+          "dateText": "4 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "The Charity Law Association of Australia and New Zealand (CLAANZ) 2026 Annual Conference tackled the forces putting charitable purpose under pressure: commercial activity, debt, mergers, bequests and AI. This article synthesises the conference’s",
           "summary": "",
           "bullets": [],
           "overridden": false,
