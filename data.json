@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-07T14:16:51.735Z",
-  "lastCheckedAt": "2026-08-07T14:16:51.735Z",
-  "recordCount": 171,
+  "generatedAt": "2026-08-07T21:33:40.666Z",
+  "lastCheckedAt": "2026-08-07T21:33:40.666Z",
+  "recordCount": 167,
   "firms": [
     {
       "name": "Addisons",
@@ -1775,60 +1775,6 @@
       "records": [
         {
           "firm": "Baker McKenzie",
-          "title": "Australia: New Modern Slavery Offence Proposed",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-new-modern-slavery-offence-proposed",
-          "dateISO": "2026-07-20",
-          "dateText": "20 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australia plans tougher modern slavery laws, including a new failure-to-prevent offence",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: AI Workplace Change – Managing Risks without Regret",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
-          "dateISO": "2026-07-17",
-          "dateText": "17 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Directors' Duties in Australia – FY27 Edition",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-directors-duties-in-australia-fy27-edition",
-          "dateISO": "2026-07-07",
-          "dateText": "7 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Baker McKenzie&apos;s FY27 Directors&apos; Duties guide outlines key governance obligations and practical guidance on cyber, AI and environmental risks.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
           "dateISO": "2026-06-17",
@@ -1894,24 +1840,6 @@
             "Competition & Consumer"
           ],
           "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines measures related to Australia's energy transition journey in this year's ...",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Victoria's Security of Payment regime overhauled",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/04/australia-victorias-security-of-payment-regime-overhauled",
-          "dateISO": "2026-04-30",
-          "dateText": "30 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Major amendments to Victoria&apos;s Security of Payment Act have started, reshaping payment claims, adjudication risk and security in construction projects.",
           "summary": "",
           "bullets": [],
           "overridden": false,
