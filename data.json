@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-07T21:33:40.666Z",
-  "lastCheckedAt": "2026-08-09T21:25:59.069Z",
-  "recordCount": 167,
+  "generatedAt": "2026-08-10T06:11:37.728Z",
+  "lastCheckedAt": "2026-08-10T06:11:37.728Z",
+  "recordCount": 168,
   "firms": [
     {
       "name": "Addisons",
@@ -1249,6 +1249,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "Class Actions and Consumer Law: Managing the Risk",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/class-actions-and-consumer-law-managing-the-risk/",
+          "dateISO": "2026-08-10",
+          "dateText": "10 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "Class Actions and Consumer Law: Managing the Risk",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "Antitrust and competition issues in international transactions",
