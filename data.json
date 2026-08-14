@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-10T06:11:37.728Z",
-  "lastCheckedAt": "2026-08-13T21:39:27.750Z",
-  "recordCount": 168,
+  "generatedAt": "2026-08-14T06:12:04.000Z",
+  "lastCheckedAt": "2026-08-14T06:12:04.000Z",
+  "recordCount": 169,
   "firms": [
     {
       "name": "Addisons",
@@ -1249,6 +1249,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "Transcending borders: Employee mobility issues for multinational employers",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/transcending-borders-employee-mobility-issues-for-multinational-employers/",
+          "dateISO": "2026-08-14",
+          "dateText": "14 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "Transcending borders: Employee mobility issues for multinational employers",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "Class Actions and Consumer Law: Managing the Risk",
