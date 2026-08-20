@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-14T06:12:04.000Z",
-  "lastCheckedAt": "2026-08-19T21:31:02.931Z",
+  "generatedAt": "2026-08-20T05:27:58.334Z",
+  "lastCheckedAt": "2026-08-20T05:27:58.334Z",
   "recordCount": 169,
   "firms": [
     {
@@ -1251,6 +1251,24 @@
       "records": [
         {
           "firm": "Ashurst",
+          "title": "Competition Law Quarterly",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/apac-competition-law-quarterly/",
+          "dateISO": "2026-08-20",
+          "dateText": "20 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "APAC Competition Law Quarterly focuses on key developments and enforcement cases across the Asia Pacific (APAC) region.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
           "title": "Transcending borders: Employee mobility issues for multinational employers",
           "permalink": "https://www.ashurstperkinscoie.com/en/insights/transcending-borders-employee-mobility-issues-for-multinational-employers/",
           "dateISO": "2026-08-14",
@@ -1443,24 +1461,6 @@
             "Consumer Law"
           ],
           "teaser": "A practical guide to settling class actions",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Ashurst",
-          "title": "Competition Law Quarterly Asia Pacific",
-          "permalink": "https://www.ashurstperkinscoie.com/en/insights/apac-competition-law-quarterly/",
-          "dateISO": "2026-04-20",
-          "dateText": "20 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition",
-          "topics": [
-            "Competition"
-          ],
-          "teaser": "APAC Competition Law Quarterly focuses on key developments and enforcement cases across the Asia Pacific (APAC) region.",
           "summary": "",
           "bullets": [],
           "overridden": false,
