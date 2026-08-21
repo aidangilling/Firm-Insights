@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-20T13:52:19.217Z",
-  "lastCheckedAt": "2026-08-20T21:22:52.630Z",
-  "recordCount": 170,
+  "generatedAt": "2026-08-21T05:42:24.249Z",
+  "lastCheckedAt": "2026-08-21T05:42:24.249Z",
+  "recordCount": 169,
   "firms": [
     {
       "name": "Addisons",
@@ -2641,24 +2641,6 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
-        {
-          "firm": "Dentons",
-          "title": "Australia ESG Bulletin – April 2026",
-          "permalink": "https://www.dentons.com/en/insights/newsletters/2026/april/22/australia-esg-bulletin/australia-esg-bulletin-april-2026",
-          "dateISO": "2026-04-23",
-          "dateText": "23 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Greenwashing",
-          "topics": [
-            "Greenwashing"
-          ],
-          "teaser": "Australia: 2025 saw global divergence in ESG regulation, which is reflected in Australia's recent reforms. In the last year, Australia has implemented mandatory climate reporting and increased prosecutions for greenwashing, while environmental reforms have been passed with the aim of cutting \"green tape\" and fast-tracking energy projects. Organisations doing business in Australia need to be aware of the changing laws, and implications for their internal ESG policies and sustainability goals.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
         {
           "firm": "Dentons",
           "title": "Beyond PAYG: Recent developments and upcoming changes for employers",
