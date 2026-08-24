@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-21T13:50:33.791Z",
-  "lastCheckedAt": "2026-08-23T21:16:30.847Z",
-  "recordCount": 170,
+  "generatedAt": "2026-08-24T05:36:17.254Z",
+  "lastCheckedAt": "2026-08-24T05:36:17.254Z",
+  "recordCount": 172,
   "firms": [
     {
       "name": "Addisons",
@@ -1267,6 +1267,43 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "Forecasting the future: navigating the ACCC in energy deals",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/forecasting-the-future-navigating-the-accc-in-energy-deals/",
+          "dateISO": "2026-08-24",
+          "dateText": "24 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers",
+            "ACCC"
+          ],
+          "teaser": "How Australia's new merger control regime affects energy sector deals, with guidance on exceptions and ACCC assessments.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Ashurst",
+          "title": "Powering Up the Bill: Proposal for Data Centres to Pay for Grid Costs",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/powering-up-the-bill-proposal-for-data-centres-to-pay-for-grid-costs/",
+          "dateISO": "2026-08-24",
+          "dateText": "24 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "Powering Up the Bill: Proposal for Data Centres to Pay for Grid Costs",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "Competition Law Quarterly",
