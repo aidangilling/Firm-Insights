@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-24T05:36:17.254Z",
-  "lastCheckedAt": "2026-08-26T05:31:19.499Z",
-  "recordCount": 172,
+  "generatedAt": "2026-08-26T13:59:33.740Z",
+  "lastCheckedAt": "2026-08-26T13:59:33.740Z",
+  "recordCount": 173,
   "firms": [
     {
       "name": "Addisons",
@@ -570,6 +570,25 @@
             "Mergers"
           ],
           "teaser": "New merger regime: first half-year insights",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
+          "title": "Game on - unfair trading practices and online gaming",
+          "permalink": "https://www.gtlaw.com.au/insights/game-on-unfair-trading-practices-and-online-gaming",
+          "dateISO": "2026-08-17",
+          "dateText": "17 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Competition, Unfair Trading",
+          "topics": [
+            "Competition",
+            "Unfair Trading"
+          ],
+          "teaser": "The Competition and Consumer Amendment (Unfair Trading Practices) Act 2026 (Cth) (the Act) passed both Houses of Parliament on 2 July 2026 and received royal assent on 6 July 2026. From 1 July 2027, when the Act comes into effect, the Australian",
           "summary": "",
           "bullets": [],
           "overridden": false,
