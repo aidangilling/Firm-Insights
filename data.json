@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-29T11:29:36.263Z",
-  "lastCheckedAt": "2026-09-02T17:07:09.600Z",
-  "recordCount": 173,
+  "generatedAt": "2026-09-02T22:58:21.545Z",
+  "lastCheckedAt": "2026-09-02T22:58:21.545Z",
+  "recordCount": 171,
   "firms": [
     {
       "name": "Addisons",
@@ -84,42 +84,6 @@
             "Enforcement & Penalties"
           ],
           "teaser": "Mandatory industry codes are no longer confined to setting minimum standards within particular industries. They are increasingly being used as a form of sector-specific regulation, prescribed under the Competition and Consumer Act 2010 (Cth) (CCA), enabling the government to intervene and impose enforceable conduct obligations and penalties where commercial practice and self-regulation are considered inadequate.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Addisons",
-          "title": "SMS Sender IDs to Be Labelled “Unverified” Unless Registered from 1 July 2026",
-          "permalink": "https://addisons.com/article/sms-sender-ids-to-be-labelled-unverified-unless-registered-from-1-july-2026/",
-          "dateISO": "2026-06-10",
-          "dateText": "10 June 2026",
-          "month": "June 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "From 1 July 2026, SMS messages sent using an unregistered branded sender ID will no longer display the relevant brand name. Instead, they will be labelled “Unverified” and grouped with other unregistered messages, including those that may be associated with scam activity.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Addisons",
-          "title": "Unregistered branded SMS to be labelled “unverified” from 1 July 2026",
-          "permalink": "https://addisons.com/article/unregistered-branded-sms-to-be-labelled-unverified-from-1-july-2026/",
-          "dateISO": "2026-05-11",
-          "dateText": "11 May 2026",
-          "month": "May 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "From 1 July 2026, SMS messages sent using an unregistered branded sender ID will no longer display the relevant brand name. Instead, these messages will be labelled “Unverified” and grouped with other unregistered SMS messages, including potential scam messages.",
           "summary": "",
           "bullets": [],
           "overridden": false,
