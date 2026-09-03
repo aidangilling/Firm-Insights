@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-03T09:26:23.801Z",
-  "lastCheckedAt": "2026-09-03T09:26:23.801Z",
-  "recordCount": 174,
+  "generatedAt": "2026-09-03T17:00:45.660Z",
+  "lastCheckedAt": "2026-09-03T17:00:45.660Z",
+  "recordCount": 173,
   "firms": [
     {
       "name": "Addisons",
@@ -559,24 +559,6 @@
       "records": [
         {
           "firm": "Gilbert + Tobin",
-          "title": "The Competitive Edge with Gilbert + Tobin",
-          "permalink": "https://www.gtlaw.com.au/insights/the-competitive-edge-with-gilbert-tobin",
-          "dateISO": "2026-09-03",
-          "dateText": "3 September 2026",
-          "month": "September 2026",
-          "year": 2026,
-          "topic": "Competition",
-          "topics": [
-            "Competition"
-          ],
-          "teaser": "Tune in to The Competitive Edge, a competition law podcast series discussing the latest matters, trends and insights in Australia and around the world. Each fortnight Moya Dodd and Matt Rubinstein explore insights and trends with our resident",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Gilbert + Tobin",
           "title": "New merger regime: first half-year insights",
           "permalink": "https://www.gtlaw.com.au/insights/new-merger-regime-first-half-year-insights",
           "dateISO": "2026-08-20",
@@ -607,6 +589,24 @@
             "Unfair Trading"
           ],
           "teaser": "The Competition and Consumer Amendment (Unfair Trading Practices) Act 2026 (Cth) (the Act) passed both Houses of Parliament on 2 July 2026 and received royal assent on 6 July 2026. From 1 July 2027, when the Act comes into effect, the Australian",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
+          "title": "The Competitive Edge with Gilbert + Tobin",
+          "permalink": "https://www.gtlaw.com.au/insights/the-competitive-edge-with-gilbert-tobin",
+          "dateISO": "2026-08-04",
+          "dateText": "4 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "Tune in to The Competitive Edge, a competition law podcast series discussing the latest matters, trends and insights in Australia and around the world. Each fortnight Moya Dodd and Matt Rubinstein explore insights and trends with our resident",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -1499,24 +1499,6 @@
             "Pricing"
           ],
           "teaser": "Australia's new unfair trading practices law starts 1 July 2027. Learn key compliance steps on dark patterns, drip pricing and subscription traps.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Ashurst",
-          "title": "No Safe Harbour: High Court Limits Crown Immunity for Government Contracts",
-          "permalink": "https://www.ashurstperkinscoie.com/en/insights/no-safe-harbour-high-court-limits-crown-immunity-for-government-contracts/",
-          "dateISO": "2026-05-14",
-          "dateText": "14 May 2026",
-          "month": "May 2026",
-          "year": 2026,
-          "topic": "Competition",
-          "topics": [
-            "Competition"
-          ],
-          "teaser": "High Court narrows derivative Crown immunity holding NSW Ports cannot avoid competition law liability for anti-competitive privatisation agreements.",
           "summary": "",
           "bullets": [],
           "overridden": false,
