@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-03T23:01:26.608Z",
-  "lastCheckedAt": "2026-09-04T09:19:48.404Z",
-  "recordCount": 173,
+  "generatedAt": "2026-09-04T16:49:44.468Z",
+  "lastCheckedAt": "2026-09-04T16:49:44.468Z",
+  "recordCount": 174,
   "firms": [
     {
       "name": "Addisons",
@@ -1304,6 +1304,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "The leading indicator: what the insurance market reveals about climate transition-plan credibility",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/the-leading-indicator-what-the-insurance-market-reveals-about-climate-transition-plan-credibility/",
+          "dateISO": "2026-09-04",
+          "dateText": "4 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Competition",
+          "topics": [
+            "Competition"
+          ],
+          "teaser": "A credible climate transition plan is one whose assumptions can be read against the signals the insurance market is already sending.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "Forecasting the future: navigating the ACCC in energy deals",
