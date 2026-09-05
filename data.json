@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-04T22:43:21.261Z",
-  "lastCheckedAt": "2026-09-04T22:43:21.261Z",
-  "recordCount": 184,
+  "generatedAt": "2026-09-05T08:47:29.883Z",
+  "lastCheckedAt": "2026-09-05T08:47:29.883Z",
+  "recordCount": 178,
   "firms": [
     {
       "name": "Addisons",
@@ -1939,42 +1939,6 @@
         },
         {
           "firm": "Baker McKenzie",
-          "title": "Australia: Five Things Every Tech Founder Must Nail",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-five-things-every-tech-founder-must-nail",
-          "dateISO": "2026-07-28",
-          "dateText": "28 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Tech founders should address key employment law risks early to help avoid costly disputes, build a stronger foundation for growth, and set up for future divestment.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: New Modern Slavery Offence Proposed",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-new-modern-slavery-offence-proposed",
-          "dateISO": "2026-07-20",
-          "dateText": "20 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australia plans tougher modern slavery laws, including a new failure-to-prevent offence",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
           "title": "Australia: AI Workplace Change – Managing Risks without Regret",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
           "dateISO": "2026-07-17",
@@ -1986,24 +1950,6 @@
             "Competition & Consumer"
           ],
           "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Victorian Right to Work from Home",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-victorian-right-to-work-from-home",
-          "dateISO": "2026-07-14",
-          "dateText": "14 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Victorian Bill introduces an employee right to work from home.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -2188,24 +2134,6 @@
             "Pricing"
           ],
           "teaser": "Treasury's draft bill would amend Australian Consumer Law to ban unfair trading, curb subscriptions and drip pricing from 1 July 2027.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Digital Services Regulation – 2025 Year-End Wrap-Up",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/01/australia-digital-services-regulation",
-          "dateISO": "2026-01-21",
-          "dateText": "21 January 2026",
-          "month": "January 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australian digital services regulatory developments for late 2025, including SMMA, online safety codes, digital duty of care, and anti-scam reforms.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -3561,42 +3489,6 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
-        {
-          "firm": "Mills Oakley",
-          "title": "Bed Bath N’ Branding: The High Court on Branding, Reputation and Consumer Confusion",
-          "permalink": "https://www.millsoakley.com.au/insights/bed-bath-n-branding-the-high-court-on-branding-reputation-and-consumer-confusion/",
-          "dateISO": "2026-07-16",
-          "dateText": "16 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Consumer Law",
-          "topics": [
-            "Consumer Law"
-          ],
-          "teaser": "The Australian High Court has recently confirmed that reputation in a brand can give rise to enforceable rights under the Australian Consumer Law and passing off, even where the relevant conduct does not infringe a registered trade mark.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Mills Oakley",
-          "title": "Payroll compliance under Australian Employment Law – why does it cause issues on M&A deals, and what can you do about it?",
-          "permalink": "https://www.millsoakley.com.au/insights/payroll-compliance-under-australian-employment-law-why-does-it-cause-issues-on-ma-deals-and-what-can-you-do-about-it/",
-          "dateISO": "2026-05-05",
-          "dateText": "5 May 2026",
-          "month": "May 2026",
-          "year": 2026,
-          "topic": "Mergers",
-          "topics": [
-            "Mergers"
-          ],
-          "teaser": "",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
         {
           "firm": "Mills Oakley",
           "title": "Academic cheating services, “work” and the limits of the TEQSA Act in the age of generative AI: TEQSA v Chegg",
