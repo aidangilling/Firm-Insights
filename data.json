@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-06T22:38:08.802Z",
-  "lastCheckedAt": "2026-09-06T22:38:08.802Z",
-  "recordCount": 178,
+  "generatedAt": "2026-09-07T09:56:27.058Z",
+  "lastCheckedAt": "2026-09-07T09:56:27.058Z",
+  "recordCount": 176,
   "firms": [
     {
       "name": "Addisons",
@@ -416,6 +416,24 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Mallesons",
+          "title": "Shopping cart before the horse? Australia's product safety laws play catch-up with online marketplaces",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/australias-product-safety-laws-play-catch-up-with-online-marketplaces.html",
+          "dateISO": "2026-09-07",
+          "dateText": "7 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Product Safety",
+          "topics": [
+            "Product Safety"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Mallesons",
           "title": "Loan behold: non-bank lenders to join the Consumer Data Right",
@@ -1014,8 +1032,29 @@
       "records": [
         {
           "firm": "Clayton Utz",
+          "title": "Subscription traps under the spotlight: Federal Court finds eHarmony misled consumers on pricing, auto-renewal and cancellation",
+          "permalink": "https://www.claytonutz.com/insights/2026/september/subscription-traps-under-the-spotlight-federal-court-finds-eharmony-misled-consumers-on-pricing-auto-renewal-and-cancellation",
+          "dateISO": "2026-09-07",
+          "dateText": "7 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "ACCC, Consumer Law, Unfair Trading, Pricing",
+          "topics": [
+            "ACCC",
+            "Consumer Law",
+            "Unfair Trading",
+            "Pricing"
+          ],
+          "teaser": "eHarmony has been found by the Federal Court to have breached the Australian Consumer Law through its handling of subscription pricing, auto-renewal and cancellation processes for paid memberships. With the ACCC continuing to zero in on subscription traps and drip pricing across digital platforms, the ruling underscores the importance for businesses with recurring payment models to scrutinise their consumer-facing disclosures, particularly as the new Unfair Trading Practices regime draws closer.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Clayton Utz",
           "title": "Drilling Into Misuse of Market Power: Novel case scrutinises Bunnings' plans for expansion",
-          "permalink": "https://www.claytonutz.com/insights/2026/august/drilling-into-misuse-of-market-power-novel-case-scrutinises-bunnings-plans-for-expansion",
+          "permalink": "https://www.claytonutz.com/insights/2026/september/drilling-into-misuse-of-market-power-novel-case-scrutinises-bunnings-plans-for-expansion",
           "dateISO": "2026-09-03",
           "dateText": "3 September 2026",
           "month": "September 2026",
@@ -1903,60 +1942,6 @@
       "records": [
         {
           "firm": "Baker McKenzie",
-          "title": "Australia: Three Things Every Tech Founder Must Nail (Part 2)",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/08/australia-tech-founder-series",
-          "dateISO": "2026-08-13",
-          "dateText": "13 August 2026",
-          "month": "August 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Practical legal lessons for tech founders to help avoid disputes, regulatory headaches and costly mistakes as they scale.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: New Modern Slavery Offence Proposed",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-new-modern-slavery-offence-proposed",
-          "dateISO": "2026-07-20",
-          "dateText": "20 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australia plans tougher modern slavery laws, including a new failure-to-prevent offence",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: AI Workplace Change – Managing Risks without Regret",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
-          "dateISO": "2026-07-17",
-          "dateText": "17 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
           "dateISO": "2026-06-17",
@@ -2022,24 +2007,6 @@
             "Competition & Consumer"
           ],
           "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines measures related to Australia's energy transition journey in this year's ...",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Victoria's Security of Payment regime overhauled",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/04/australia-victorias-security-of-payment-regime-overhauled",
-          "dateISO": "2026-04-30",
-          "dateText": "30 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Major amendments to Victoria&apos;s Security of Payment Act have started, reshaping payment claims, adjudication risk and security in construction projects.",
           "summary": "",
           "bullets": [],
           "overridden": false,
