@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T23:07:26.587Z",
-  "lastCheckedAt": "2026-09-08T23:07:26.587Z",
-  "recordCount": 177,
+  "generatedAt": "2026-09-09T09:23:44.664Z",
+  "lastCheckedAt": "2026-09-09T09:23:44.664Z",
+  "recordCount": 178,
   "firms": [
     {
       "name": "Addisons",
@@ -1958,6 +1958,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Draft Legislation Takes Hammer to Non-Competes",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/09/australia-draft-legislation-takes-hammer-to-non-competes",
+          "dateISO": "2026-09-09",
+          "dateText": "9 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "The Federal Government has released long-awaited draft laws to ban non-competes. We explore what the proposed changes mean for employers.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
