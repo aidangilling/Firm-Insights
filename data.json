@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-09T09:23:44.664Z",
-  "lastCheckedAt": "2026-09-09T22:53:59.006Z",
-  "recordCount": 178,
+  "generatedAt": "2026-09-10T09:23:03.212Z",
+  "lastCheckedAt": "2026-09-10T09:23:03.212Z",
+  "recordCount": 179,
   "firms": [
     {
       "name": "Addisons",
@@ -595,6 +595,25 @@
       "records": [
         {
           "firm": "Gilbert + Tobin",
+          "title": "Australian Government passes legislation making critical changes to Australia’s merger control regime",
+          "permalink": "https://www.gtlaw.com.au/insights/australian-government-passes-legislation-making-critical-changes-to-Australias-merger-control-regime",
+          "dateISO": "2026-09-10",
+          "dateText": "10 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers",
+            "ACCC"
+          ],
+          "teaser": "Changes to Australia&#39;s merger regime will modify the legal consequences of failing to notify, clarify the &#39;control&#39; exemption and introduce a mechanism to extend ACCC approvals that have become &#39;stale&#39;. We examine what these changes mean for",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
           "title": "The Competitive Edge with Gilbert + Tobin",
           "permalink": "https://www.gtlaw.com.au/insights/the-competitive-edge-with-gilbert-tobin",
           "dateISO": "2026-09-03",
@@ -696,7 +715,7 @@
           "topics": [
             "Mergers"
           ],
-          "teaser": "Research and resources Merging for impact: structuring charity and not-for-profit mergers and acquisitions Charities and not-for-profits pursue mergers and acquisitions to maximise impact, strengthen capability and build long-term sustainability.",
+          "teaser": "Our feature article examines charity mergers and acquisitions, including structuring considerations, purpose alignment and the unique issues that arise when charities acquire for-profit entities.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -715,26 +734,7 @@
             "Greenwashing",
             "Enforcement & Penalties"
           ],
-          "teaser": "Since 2023 there has been a steady increase in greenwashing litigation and civil penalties being pursued by the Australian Securities and Investments Commission ( ASIC ). In a string of successful prosecutions, penalties in the range of $10.5",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Gilbert + Tobin",
-          "title": "Bill introduces critical changes to Australia’s merger control regime",
-          "permalink": "https://www.gtlaw.com.au/insights/bill-introduces-critical-key-changes-to-australias-merger-control-regime",
-          "dateISO": "2026-07-07",
-          "dateText": "7 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Mergers, ACCC",
-          "topics": [
-            "Mergers",
-            "ACCC"
-          ],
-          "teaser": "Proposed changes to Australia&#39;s merger regime will modify the legal consequences of failing to notify, clarify the &#39;control&#39; exemption and introduce a mechanism to extend ACCC approvals that have become &#39;stale&#39;. We examine what these changes mean",
+          "teaser": "Since 2023 there has been a steady increase in greenwashing litigation and civil penalties being pursued by the Australian Securities and Investments Commission (ASIC).",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -752,7 +752,7 @@
           "topics": [
             "Mergers"
           ],
-          "teaser": "The Australian Securities Exchange ( ASX ) has responded to market feedback on its proposed changes to the Listing Rules for shareholder approval of dilutive acquisitions and changes in admission status. For listed bidders, the most important",
+          "teaser": "The Australian Securities Exchange (ASX) has responded to market feedback on its proposed changes to the Listing Rules for shareholder approval of dilutive acquisitions and changes in admission status.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -766,12 +766,11 @@
           "dateText": "4 June 2026",
           "month": "June 2026",
           "year": 2026,
-          "topic": "Competition, ACCC",
+          "topic": "ACCC",
           "topics": [
-            "Competition",
             "ACCC"
           ],
-          "teaser": "The Competition and Consumer Amendment (Responding to Exceptional Circumstances) Bill 2026 ( Act ) commenced on 27 May 2026. It introduces an expedited process that enables the ACCC to authorise coordination between competitors in emergency",
+          "teaser": "New exceptional circumstances laws give the Minister power to enable the ACCC to fast-track exemptions and authorisations, including retrospectively, for businesses responding to emergencies and major economic disruption.",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -1361,6 +1360,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "Australia's merger laws receive important refinements",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/australia-merger-laws-receive-important-refinements/",
+          "dateISO": "2026-09-10",
+          "dateText": "10 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "Parliament has passed amendments to Australia's mandatory merger control regime, refining automatic voiding, the control exemption and clearance rules",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "The leading indicator: what the insurance market reveals about climate transition-plan credibility",
