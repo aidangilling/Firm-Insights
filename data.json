@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T09:23:03.212Z",
-  "lastCheckedAt": "2026-09-10T16:58:43.065Z",
+  "generatedAt": "2026-09-10T22:55:09.248Z",
+  "lastCheckedAt": "2026-09-10T22:55:09.248Z",
   "recordCount": 179,
   "firms": [
     {
@@ -595,25 +595,6 @@
       "records": [
         {
           "firm": "Gilbert + Tobin",
-          "title": "Australian Government passes legislation making critical changes to Australia’s merger control regime",
-          "permalink": "https://www.gtlaw.com.au/insights/australian-government-passes-legislation-making-critical-changes-to-Australias-merger-control-regime",
-          "dateISO": "2026-09-10",
-          "dateText": "10 September 2026",
-          "month": "September 2026",
-          "year": 2026,
-          "topic": "Mergers, ACCC",
-          "topics": [
-            "Mergers",
-            "ACCC"
-          ],
-          "teaser": "Changes to Australia&#39;s merger regime will modify the legal consequences of failing to notify, clarify the &#39;control&#39; exemption and introduce a mechanism to extend ACCC approvals that have become &#39;stale&#39;. We examine what these changes mean for",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Gilbert + Tobin",
           "title": "The Competitive Edge with Gilbert + Tobin",
           "permalink": "https://www.gtlaw.com.au/insights/the-competitive-edge-with-gilbert-tobin",
           "dateISO": "2026-09-03",
@@ -735,6 +716,25 @@
             "Enforcement & Penalties"
           ],
           "teaser": "Since 2023 there has been a steady increase in greenwashing litigation and civil penalties being pursued by the Australian Securities and Investments Commission (ASIC).",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
+          "title": "Bill introduces critical changes to Australia’s merger control regime",
+          "permalink": "https://www.gtlaw.com.au/insights/bill-introduces-critical-key-changes-to-australias-merger-control-regime",
+          "dateISO": "2026-07-07",
+          "dateText": "7 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers",
+            "ACCC"
+          ],
+          "teaser": "Proposed changes to Australia&#39;s merger regime will modify the legal consequences of failing to notify, clarify the &#39;control&#39; exemption and introduce a mechanism to extend ACCC approvals that have become &#39;stale&#39;. We examine what these changes mean",
           "summary": "",
           "bullets": [],
           "overridden": false,
