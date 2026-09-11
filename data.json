@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-10T22:55:09.248Z",
-  "lastCheckedAt": "2026-09-10T22:55:09.248Z",
-  "recordCount": 179,
+  "generatedAt": "2026-09-11T09:21:41.184Z",
+  "lastCheckedAt": "2026-09-11T09:21:41.184Z",
+  "recordCount": 181,
   "firms": [
     {
       "name": "Addisons",
@@ -595,6 +595,25 @@
       "records": [
         {
           "firm": "Gilbert + Tobin",
+          "title": "Australian Government passes legislation making critical changes to Australia’s merger control regime",
+          "permalink": "https://www.gtlaw.com.au/insights/australian-government-passes-legislation-making-critical-changes-to-Australias-merger-control-regime",
+          "dateISO": "2026-09-10",
+          "dateText": "10 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers",
+            "ACCC"
+          ],
+          "teaser": "Changes to Australia&#39;s merger regime will modify the legal consequences of failing to notify, clarify the &#39;control&#39; exemption and introduce a mechanism to extend ACCC approvals that have become &#39;stale&#39;. We examine what these changes mean for",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Gilbert + Tobin",
           "title": "The Competitive Edge with Gilbert + Tobin",
           "permalink": "https://www.gtlaw.com.au/insights/the-competitive-edge-with-gilbert-tobin",
           "dateISO": "2026-09-03",
@@ -716,25 +735,6 @@
             "Enforcement & Penalties"
           ],
           "teaser": "Since 2023 there has been a steady increase in greenwashing litigation and civil penalties being pursued by the Australian Securities and Investments Commission (ASIC).",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Gilbert + Tobin",
-          "title": "Bill introduces critical changes to Australia’s merger control regime",
-          "permalink": "https://www.gtlaw.com.au/insights/bill-introduces-critical-key-changes-to-australias-merger-control-regime",
-          "dateISO": "2026-07-07",
-          "dateText": "7 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Mergers, ACCC",
-          "topics": [
-            "Mergers",
-            "ACCC"
-          ],
-          "teaser": "Proposed changes to Australia&#39;s merger regime will modify the legal consequences of failing to notify, clarify the &#39;control&#39; exemption and introduce a mechanism to extend ACCC approvals that have become &#39;stale&#39;. We examine what these changes mean",
           "summary": "",
           "bullets": [],
           "overridden": false,
@@ -1049,6 +1049,25 @@
       "records": [
         {
           "firm": "Clayton Utz",
+          "title": "More changes to ACCC merger regime: what the latest amendments mean for your business",
+          "permalink": "https://www.claytonutz.com/insights/2026/august/more-changes-to-accc-merger-regime-what-the-latest-amendments-mean-for-your-business",
+          "dateISO": "2026-09-11",
+          "dateText": "11 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Mergers, ACCC",
+          "topics": [
+            "Mergers",
+            "ACCC"
+          ],
+          "teaser": "Australia’s mandatory and suspensory merger control regime – introduced by the Treasury Laws Amendment (Mergers and Acquisitions Reform) Act 2024 and operative from 1 January 2026 – represented a fundamental shift in how acquisitions above defined thresholds are notified to, and assessed by, the ACCC.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Clayton Utz",
           "title": "Subscription traps under the spotlight: Federal Court finds eHarmony misled consumers on pricing, auto-renewal and cancellation",
           "permalink": "https://www.claytonutz.com/insights/2026/september/subscription-traps-under-the-spotlight-federal-court-finds-eharmony-misled-consumers-on-pricing-auto-renewal-and-cancellation",
           "dateISO": "2026-09-07",
@@ -1360,6 +1379,24 @@
       "domestic": false,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Ashurst",
+          "title": "A free for all? Consultation opens on new laws to ban non-compete and staff non-solicitation clauses and make wage-fixing and non-poaching cartel conduct",
+          "permalink": "https://www.ashurstperkinscoie.com/en/insights/proposed-bans-on-post-employment-restraints-wage-fixing-non-poaching-cartel-conduct/",
+          "dateISO": "2026-09-11",
+          "dateText": "11 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Cartel",
+          "topics": [
+            "Cartel"
+          ],
+          "teaser": "Proposal to ban non-compete and staff non-solicitation clauses, and to make wage-fixing and non-poaching cartel conduct",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Ashurst",
           "title": "Australia's merger laws receive important refinements",
