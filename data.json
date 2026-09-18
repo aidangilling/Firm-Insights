@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-17T23:20:30.262Z",
-  "lastCheckedAt": "2026-09-17T23:20:30.262Z",
-  "recordCount": 166,
+  "generatedAt": "2026-09-18T09:22:47.111Z",
+  "lastCheckedAt": "2026-09-18T09:22:47.111Z",
+  "recordCount": 167,
   "firms": [
     {
       "name": "Addisons",
@@ -452,6 +452,24 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Mallesons",
+          "title": "Gone, but not forgotten: Australia’s new ‘voidable’ merger regime",
+          "permalink": "https://www.mallesons.com/au/en/insights/latest-thinking/gone-but-not-forgotten-australias-new-voidable-merger-regime.html",
+          "dateISO": "2026-09-18",
+          "dateText": "18 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Mallesons",
           "title": "The upcoming ban on non-compete, non-poaching restrictions and wage-fixing arrangements",
