@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-21T23:47:31.790Z",
-  "lastCheckedAt": "2026-09-21T23:47:31.790Z",
-  "recordCount": 173,
+  "generatedAt": "2026-09-22T09:38:23.639Z",
+  "lastCheckedAt": "2026-09-22T09:38:23.639Z",
+  "recordCount": 171,
   "firms": [
     {
       "name": "Addisons",
@@ -15,6 +15,79 @@
       "domestic": true,
       "manualOnly": false,
       "records": [
+        {
+          "firm": "Addisons",
+          "title": "Control, compliance and clearance: Australia’s latest merger amendments",
+          "permalink": "https://addisons.com/article/control-compliance-and-clearance-australias-latest-merger-amendments/",
+          "dateISO": "2026-09-22",
+          "dateText": "22 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Mergers",
+          "topics": [
+            "Mergers"
+          ],
+          "teaser": "Targeted amendments to Australia’s mandatory merger control regime have important consequences for companies considering acquisitions, minority investments and other strategic transactions.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Addisons",
+          "title": "Non-competes on the chopping block: what Australian businesses need to know",
+          "permalink": "https://addisons.com/article/non-competes-on-the-chopping-block-what-australian-businesses-need-to-know/",
+          "dateISO": "2026-09-22",
+          "dateText": "22 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Australia’s rules on post-employment restraints may be heading for a major reset and businesses that rely on non-competes, no-poach clauses or staff non-solicitation restraints should start preparing now.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Addisons",
+          "title": "Rising infringement notices – harmless or cause for concern?",
+          "permalink": "https://addisons.com/article/rising-infringement-notices-harmless-or-cause-for-concern/",
+          "dateISO": "2026-09-22",
+          "dateText": "22 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "ACCC, Enforcement & Penalties",
+          "topics": [
+            "ACCC",
+            "Enforcement & Penalties"
+          ],
+          "teaser": "The ACCC’s increased use of infringement notices in 2026 shows that they are becoming a more prominent enforcement tool, with real reputational and compliance consequences.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Addisons",
+          "title": "Pack Design: lessons from Aldi v Hampden on avoiding copyright infringement",
+          "permalink": "https://addisons.com/article/pack-design-lessons-from-aldi-v-hampden-on-avoiding-copyright-infringement/",
+          "dateISO": "2026-09-18",
+          "dateText": "18 September 2026",
+          "month": "September 2026",
+          "year": 2026,
+          "topic": "Consumer Law",
+          "topics": [
+            "Consumer Law"
+          ],
+          "teaser": "A recent Full Court of the Federal Court decision provides an important reminder for consumer brands and retail businesses developing new packaging, refreshing brands or launching private label products. The case highlights that copyright disputes can arise even where designers do not directly replicate an entire pack design, and that courts will undertake a detailed&#8230;",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
         {
           "firm": "Addisons",
           "title": "Discount pricing done right after the ACCC’s win against Coles",
@@ -1779,96 +1852,6 @@
         },
         {
           "firm": "Baker McKenzie",
-          "title": "Australia Charts a New Course on AI Regulation and Policy",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/08/australia-charts-a-new-course-on-ai-regulation-and-policy",
-          "dateISO": "2026-08-25",
-          "dateText": "25 August 2026",
-          "month": "August 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Recent developments in Australia indicate that AI-specific regulation is on the horizon and identify areas of law primed for AI-specific reform.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Three Things Every Tech Founder Must Nail (Part 2)",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/08/australia-tech-founder-series",
-          "dateISO": "2026-08-13",
-          "dateText": "13 August 2026",
-          "month": "August 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Practical legal lessons for tech founders to help avoid disputes, regulatory headaches and costly mistakes as they scale.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: AI Workplace Change – Managing Risks without Regret",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
-          "dateISO": "2026-07-17",
-          "dateText": "17 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Directors' Duties in Australia – FY27 Edition",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-directors-duties-in-australia-fy27-edition",
-          "dateISO": "2026-07-07",
-          "dateText": "7 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Baker McKenzie&apos;s FY27 Directors&apos; Duties guide outlines key governance obligations and practical guidance on cyber, AI and environmental risks.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "AI Governance Tracker",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/resources/ai-governance-tracker",
-          "dateISO": "2026-06-24",
-          "dateText": "24 June 2026",
-          "month": "June 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Our AI Governance Tracker is a regularly updated, practical tool that compares global AI regulations and key guiding principles.",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
           "title": "Australia: Scams Prevention – Draft Code and Rules Released",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/06/australia-scams-prevention-draft-code-and-rules-released",
           "dateISO": "2026-06-17",
@@ -1934,24 +1917,6 @@
             "Competition & Consumer"
           ],
           "teaser": "The 2026–27 Australian Federal Budget was released on 12 May 2026. This &ldquo;Budget Bite&rdquo; examines measures related to Australia's energy transition journey in this year's ...",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
-          "title": "Australia: Victoria's Security of Payment regime overhauled",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/04/australia-victorias-security-of-payment-regime-overhauled",
-          "dateISO": "2026-04-30",
-          "dateText": "30 April 2026",
-          "month": "April 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Major amendments to Victoria&apos;s Security of Payment Act have started, reshaping payment claims, adjudication risk and security in construction projects.",
           "summary": "",
           "bullets": [],
           "overridden": false,
