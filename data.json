@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-07T11:30:49.947Z",
-  "lastCheckedAt": "2026-10-07T11:30:49.947Z",
-  "recordCount": 177,
+  "generatedAt": "2026-10-07T19:17:57.387Z",
+  "lastCheckedAt": "2026-10-07T19:17:57.387Z",
+  "recordCount": 179,
   "firms": [
     {
       "name": "Addisons",
@@ -1888,6 +1888,24 @@
         },
         {
           "firm": "Baker McKenzie",
+          "title": "Australia Charts a New Course on AI Regulation and Policy",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/08/australia-charts-a-new-course-on-ai-regulation-and-policy",
+          "dateISO": "2026-08-25",
+          "dateText": "25 August 2026",
+          "month": "August 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Recent developments in Australia indicate that AI-specific regulation is on the horizon and identify areas of law primed for AI-specific reform.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
           "title": "Australia: Three Things Every Tech Founder Must Nail (Part 2)",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/08/australia-tech-founder-series",
           "dateISO": "2026-08-13",
@@ -1906,24 +1924,6 @@
         },
         {
           "firm": "Baker McKenzie",
-          "title": "Australia: New Modern Slavery Offence Proposed",
-          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-new-modern-slavery-offence-proposed",
-          "dateISO": "2026-07-20",
-          "dateText": "20 July 2026",
-          "month": "July 2026",
-          "year": 2026,
-          "topic": "Competition & Consumer",
-          "topics": [
-            "Competition & Consumer"
-          ],
-          "teaser": "Australia plans tougher modern slavery laws, including a new failure-to-prevent offence",
-          "summary": "",
-          "bullets": [],
-          "overridden": false,
-          "notes": ""
-        },
-        {
-          "firm": "Baker McKenzie",
           "title": "Australia: AI Workplace Change – Managing Risks without Regret",
           "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-ai-workplace-change-managing-risks-without-regret",
           "dateISO": "2026-07-17",
@@ -1935,6 +1935,42 @@
             "Competition & Consumer"
           ],
           "teaser": "As AI transforms workplaces, employers must navigate redundancy, consultation and psychosocial risk obligations carefully",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "Australia: Directors' Duties in Australia – FY27 Edition",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/2026/07/australia-directors-duties-in-australia-fy27-edition",
+          "dateISO": "2026-07-07",
+          "dateText": "7 July 2026",
+          "month": "July 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Baker McKenzie&apos;s FY27 Directors&apos; Duties guide outlines key governance obligations and practical guidance on cyber, AI and environmental risks.",
+          "summary": "",
+          "bullets": [],
+          "overridden": false,
+          "notes": ""
+        },
+        {
+          "firm": "Baker McKenzie",
+          "title": "AI Governance Tracker",
+          "permalink": "https://www.bakermckenzie.com/en/insight/publications/resources/ai-governance-tracker",
+          "dateISO": "2026-06-24",
+          "dateText": "24 June 2026",
+          "month": "June 2026",
+          "year": 2026,
+          "topic": "Competition & Consumer",
+          "topics": [
+            "Competition & Consumer"
+          ],
+          "teaser": "Our AI Governance Tracker is a regularly updated, practical tool that compares global AI regulations and key guiding principles.",
           "summary": "",
           "bullets": [],
           "overridden": false,
